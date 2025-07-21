@@ -1,3 +1,3 @@
 # DBMS-LAB
 # List of Experiments
-[DBMS LAB](https://duckduckgo.com).
+[DBMS LAB](DBMS_LAB_SYLLABUS.pdf).
