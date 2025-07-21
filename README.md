@@ -9,7 +9,7 @@
 4. Data Inside the database must follow business Rules.
    
 ## List of Experiments
-[DBMS LAB](DBMS_LAB_SYLLABUS.pdf).
+[DBMS LAB_SYLLABUS](DBMS_LAB_SYLLABUS.pdf).
 
 ## WEEK1
 1. Write SQL queries to CREATE TABLES for various databases using DDL commands (i.e. CREATE, ALTER, DROP, TRUNCATE).
