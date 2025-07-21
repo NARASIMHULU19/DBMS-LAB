@@ -32,6 +32,8 @@
 - [DELETE](https://www.oracletutorial.com/oracle-basics/oracle-delete/)
 
 # WEEK1: DESIGN THE DATA BASE of the FOLLOWING
+![DB1](DB1.png)
+![DB2](DB2.png)
 
 
 
