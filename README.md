@@ -40,7 +40,7 @@
 1. CREATE TABLES OF THE ABOVE DataBase With Out Constraints [2M]
 2. INSERT All Valuses inside the table. [2M]
 3. Describe All Tables. [1M]
-4. List the Created Lables. [1M]
+4. List the Created tables. [1M]
 5. Display the Values of each table. [2M]
 6. Delete All Tables [2M]
    
