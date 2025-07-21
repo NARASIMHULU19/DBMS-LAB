@@ -34,7 +34,7 @@
 # WEEK1: DESIGN THE DATA BASE of the FOLLOWING
 ![DB1](DBD1.png)
 ![DB2](DBD3.png)
-![DB3](DBD3.png)
+![DB3](DBD2.png)
 
 
 
