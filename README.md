@@ -44,7 +44,7 @@
 5. Display the Values of each table. [2M]
 6. Delete All Tables [2M]
    
-## Viva Voce [10 Marks]
+## Viva Voce [10 Marks] [Link](https://forms.gle/c6j46VGtdedejy2W9)
 
 # WEEK-1 (COntinuation)
 ## Constraints for the above Database
@@ -69,7 +69,7 @@
    3. Insert the values specified by the above database
    4. Display the instances of each table in the database
    5. Delete all tables
-## VIVA VOCE [10 Marks]
+## VIVA VOCE [10 Marks] 
 
 
 
