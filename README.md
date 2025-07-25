@@ -44,8 +44,35 @@
 5. Display the Values of each table. [2M]
 6. Delete All Tables [2M]
    
+## Viva Voce [10 Marks]
 
-# Viva Voce [10 Marks]
+# WEEK-1 (COntinuation)
+## Constraints for the above Database
+1. Primary Key Constraints for the Following Attributes
+   1. Student_number for student table
+   2. Course_number for course table
+   3. Section_idendifier for section table
+   4. Student_number, Section_identifier for gradereport table
+   5. Course_number, Prerequisite_number for prerequisite table
+2. Foriegn Key Constraints for the Following Attributes
+   1. Student_number for Grade_report Table
+   2. Section_identifier for
+   3. Course_number for prerequisite
+3. Not Null Constraints for the following Attributes
+   1. Major for Student tablethe 
+   2. Credit_hrs for Course table
+   3. Semester, Section for Section Table
+   4. Grade for GradeReport
+## Use the above Contraints to implement the following
+   1. Implement the tables using above contraints
+   2. Display the decription of each table
+   3. Insert the values specified by the above database
+   4. Display the instances of each table in the database
+   5. Delete all tables
+## VIVA VOCE [10 Marks]
+
+
+
 
 
 
