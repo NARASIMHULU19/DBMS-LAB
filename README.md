@@ -1,6 +1,8 @@
 # DBMS-LAB
 
-# [USE THE ORACLE SQL LOGIN](https://www.oracle.com/database/technologies/oracle-live-sql/)
+## 1 [USE THE ORACLE SQL LOGIN](https://www.oracle.com/database/technologies/oracle-live-sql/)
+## 2 [SRIT ORACLE SQL LOGIN SESSION](http://localhost:8080/apex/f?p=4550:1:1238993382107458)
+
 
 # SQL ETHICS
 1. ALL Keywords/Reserved Words must be Capital letters
