@@ -58,10 +58,10 @@
    5. Course_number, Prerequisite_number for prerequisite table
 2. Foriegn Key Constraints for the Following Attributes
    1. Student_number for Grade_report Table
-   2. Section_identifier for
+   2. Section_identifier for Grade_reoprt Table
    3. Course_number for prerequisite
 3. Not Null Constraints for the following Attributes
-   1. Major for Student tablethe 
+   1. Major for Student table
    2. Credit_hrs for Course table
    3. Semester, Section for Section Table
    4. Grade for GradeReport
