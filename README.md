@@ -70,10 +70,21 @@
    2. Display the decription of each table
    3. Insert the values specified by the above database
    4. Display the instances of each table in the database
-   5. All *branch* attribute in *student* table and Describe the table
-      
-   6. Delete all tables
+   5. All **branch** attribute in **student** table and Describe the table
+   6. Copy **Major** attribure values into **branch** attribute and display it
+   7. Remove the **Major** attribute in **Student**
+   8. Change the name of **Course_number** to **cid** in **course** and describe it
+   9. change the value of **credit-hrs** of *database* to *4* in **course**
+   10. Put **NOT NULL** CONSTRAINT to column **branch** in student
+   11. Replace the **student** table name to **pupil**
+   12. Remove the **student** table
+   13. Remove the rows of 'Fall' Semester in **section**
+   14. Remove the row of 'Data_structure' in **Course**
+   15. Remove all rows in all tables using **TRUNCATE** table
+   16. Remove **pupil, course and section** table so that it exist in recycle bin
+   17. Remove **Grade_Report & Prerequisites** table permanently
 ## VIVA VOCE [10 Marks] 
+### ----------------------------------------- END OF WEEK-1 LAB ------------------------------------------------
 
 
 
