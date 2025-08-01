@@ -70,7 +70,8 @@
    2. Display the decription of each table
    3. Insert the values specified by the above database
    4. Display the instances of each table in the database
-   5. Delete all tables
+   5. 
+   6. Delete all tables
 ## VIVA VOCE [10 Marks] 
 
 
