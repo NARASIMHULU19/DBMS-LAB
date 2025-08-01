@@ -84,7 +84,8 @@
    16. Remove **pupil, course and section** table so that it exist in recycle bin
    17. Remove **Grade_Report & Prerequisites** table permanently
 ## VIVA VOCE [10 Marks] 
-### ---------------------------------- END OF WEEK-1 LAB -----------------------------
+### ---------------------------------- END OF WEEK-1 LAB ----------------------------
+***
 
 
 
