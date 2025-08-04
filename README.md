@@ -88,7 +88,35 @@
 ***
 # WEEK-2
 1.   Queries (along with sub-Queries) using ANY, ALL, IN, EXISTS, NOTEXISTS, UNION, INTERSET, Constraints. Example - Select the roll number and name of the student who secured fourth rank in the class.
-2. Queries using Aggregate functions (COUNT, SUM, AVG, MAX and MIN), GROUP BY, HAVING and Creation and dropping of Views. 
+2. Queries using Aggregate functions (COUNT, SUM, AVG, MAX and MIN), GROUP BY, HAVING and Creation and dropping of Views.
+
+## Links for Preparations
+1. [WHERE CLAUSE](https://www.oracletutorial.com/oracle-basics/oracle-where/)
+2. [SUBQUERY](https://www.oracletutorial.com/oracle-basics/oracle-subquery/)
+3. [Co-Related SubQuery](https://www.oracletutorial.com/oracle-basics/oracle-subquery/)
+4. [EXISTS](https://www.oracletutorial.com/oracle-basics/oracle-exists/)
+5. [NOT EXISTS](https://www.oracletutorial.com/oracle-basics/oracle-not-exists/)
+6. [ANY](https://www.oracletutorial.com/oracle-basics/oracle-any/)
+7. [ALL](https://www.oracletutorial.com/oracle-basics/oracle-any/)
+8. [IN](https://www.oracletutorial.com/oracle-basics/oracle-in/)
+9. ### CONSTRAINTS
+   1. [PRIMARY KEY](https://www.oracletutorial.com/oracle-basics/oracle-primary-key/)
+   2. [FOREIGN KEY](https://www.oracletutorial.com/oracle-basics/oracle-foreign-key/)
+   3. [UNIQUE](https://www.oracletutorial.com/oracle-basics/oracle-foreign-key/)
+   4. [CHECK](https://www.oracletutorial.com/oracle-basics/oracle-check-constraint/)
+   5. [NOT NULL](https://www.oracletutorial.com/oracle-basics/oracle-not-null/)
+   6. [DEFAULT](https://www.oracletutorial.com/oracle-basics/oracle-default/)
+10. ### SET OPERATIONS
+    1. [UNION](https://www.oracletutorial.com/oracle-basics/oracle-union/)
+    2. [INTERSECT](https://www.oracletutorial.com/oracle-basics/oracle-intersect/)
+    3. [MINUS](https://www.oracletutorial.com/oracle-basics/oracle-minus/)
+11. ### Aggregate Functions
+    1. [Aggregate Functions](https://www.oracletutorial.com/oracle-aggregate-functions/)
+    2. [AVERAGE](https://www.oracletutorial.com/oracle-aggregate-functions/oracle-avg/)
+    3. [COUNT](https://www.oracletutorial.com/oracle-aggregate-functions/oracle-count/)
+    4. [MAX](https://www.oracletutorial.com/oracle-aggregate-functions/oracle-max/)
+    5. [MIN](https://www.oracletutorial.com/oracle-aggregate-functions/oracle-min/)
+    6. [SUM](https://www.oracletutorial.com/oracle-aggregate-functions/oracle-sum/)
 
 
 
