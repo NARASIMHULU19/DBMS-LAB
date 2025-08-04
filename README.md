@@ -119,9 +119,18 @@
     6. [SUM](https://www.oracletutorial.com/oracle-aggregate-functions/oracle-sum/)
 
 ## USE THE FOLLOWING RELATIONAL SCHEMA and its instances Complete Week-2 Lab Session
+### Company Relatinal Schema 
 ![COMPANY DATABASE SCHEMA](CompanyDB.png)
+### Company Relational Instances
 ![COMAPANY_INSTANCES1](Company1.png)
 ![Company_Instances2](company2.png)
-
-
+## Also Implement the Following Sailors Database
+### Sailors Database Schema
+![SailorsDB](SailorsDB.png)
+### Sailors Instances
+![Sailors_INSTANCE](Sailors.png)
+### Reserves Instances
+![Reserves_InStances](boat.png)
+### Boat Instances
+![boat_instances](boat1.png)
 
