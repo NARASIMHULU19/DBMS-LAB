@@ -86,9 +86,9 @@
 ## VIVA VOCE [10 Marks] 
 ### ---------------------------------- END OF WEEK-1 LAB ----------------------------
 ***
-
-
-
+# WEEK-2
+1.   Queries (along with sub-Queries) using ANY, ALL, IN, EXISTS, NOTEXISTS, UNION, INTERSET, Constraints. Example - Select the roll number and name of the student who secured fourth rank in the class.
+2. Queries using Aggregate functions (COUNT, SUM, AVG, MAX and MIN), GROUP BY, HAVING and Creation and dropping of Views. 
 
 
 
