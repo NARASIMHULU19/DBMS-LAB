@@ -118,7 +118,10 @@
     5. [MIN](https://www.oracletutorial.com/oracle-aggregate-functions/oracle-min/)
     6. [SUM](https://www.oracletutorial.com/oracle-aggregate-functions/oracle-sum/)
 
-
+## USE THE FOLLOWING RELATIONAL SCHEMA and its instances Complete Week-2 Lab Session
+![COMPANY DATABASE SCHEMA](CompanyDB.png)
+![COMAPANY_INSTANCES1](Company1.png)
+![Company_Instances2](company2.png)
 
 
 
