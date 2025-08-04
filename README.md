@@ -126,7 +126,7 @@
 ![Company_Instances2](company2.png)
 ## Also Implement the Following Sailors Database
 ### Sailors Database Schema
-![SailorsDB](SailorsDB.png)
+![SailorsDB](Sailors.png)
 ### Sailors Instances
 ![Sailors_INSTANCE](Sailors.png)
 ### Reserves Instances
