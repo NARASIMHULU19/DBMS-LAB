@@ -97,7 +97,7 @@
 4. [EXISTS](https://www.oracletutorial.com/oracle-basics/oracle-exists/)
 5. [NOT EXISTS](https://www.oracletutorial.com/oracle-basics/oracle-not-exists/)
 6. [ANY](https://www.oracletutorial.com/oracle-basics/oracle-any/)
-7. [ALL](https://www.oracletutorial.com/oracle-basics/oracle-any/)
+7. [ALL](https://www.oracletutorial.com/oracle-basics/oracle-all/)
 8. [IN](https://www.oracletutorial.com/oracle-basics/oracle-in/)
 9. ### CONSTRAINTS
    1. [PRIMARY KEY](https://www.oracletutorial.com/oracle-basics/oracle-primary-key/)
@@ -126,7 +126,7 @@
 ![Company_Instances2](company2.png)
 ## Also Implement the Following Sailors Database
 ### Sailors Database Schema
-![SailorsDB](Sailors.png)
+![SailorsDB](Salors_DB.png)
 ### Sailors Instances
 ![Sailors_INSTANCE](Sailors.png)
 ### Reserves Instances
