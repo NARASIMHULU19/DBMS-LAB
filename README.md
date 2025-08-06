@@ -93,7 +93,7 @@
 ## Links for Preparations
 1. [WHERE CLAUSE](https://www.oracletutorial.com/oracle-basics/oracle-where/)
 2. [SUBQUERY](https://www.oracletutorial.com/oracle-basics/oracle-subquery/)
-3. [Co-Related SubQuery](https://www.oracletutorial.com/oracle-basics/oracle-subquery/)
+3. [Co-Related SubQuery](https://www.oracletutorial.com/oracle-basics/oracle-correlated-subquery/)
 4. [EXISTS](https://www.oracletutorial.com/oracle-basics/oracle-exists/)
 5. [NOT EXISTS](https://www.oracletutorial.com/oracle-basics/oracle-not-exists/)
 6. [ANY](https://www.oracletutorial.com/oracle-basics/oracle-any/)
