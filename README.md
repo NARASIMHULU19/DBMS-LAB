@@ -117,6 +117,13 @@
     4. [MAX](https://www.oracletutorial.com/oracle-aggregate-functions/oracle-max/)
     5. [MIN](https://www.oracletutorial.com/oracle-aggregate-functions/oracle-min/)
     6. [SUM](https://www.oracletutorial.com/oracle-aggregate-functions/oracle-sum/)
+12. ### Grouping rows
+    1. [GROUP BY CLAUSE](https://www.oracletutorial.com/oracle-basics/oracle-group-by/)
+    2. [HAVING CLAUSE](https://www.oracletutorial.com/oracle-basics/oracle-having/)
+13. ### Creating and Dropping Views
+    1. [Introduction to views](https://www.oracletutorial.com/oracle-view/)
+    2. [Creating Views](https://www.oracletutorial.com/oracle-view/oracle-create-view/)
+    3. [Dropping Views](https://www.oracletutorial.com/oracle-view/oracle-drop-view/)
 
 ## USE THE FOLLOWING RELATIONAL SCHEMA and its instances Complete Week-2 Lab Session
 ### Company Relatinal Schema 
