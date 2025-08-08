@@ -142,7 +142,6 @@
 ![boat_instances](boat1.png)
 ## Use the above database to Answer the following Questions
 1. Find the names and ages of all sailors.[^1]
-
 2. Find all sailors with a rating above 7.[^2]
 3. Find the names of sailors who have reserved boat number 103 [^3]
 4. Find the sids of sailors who have reserved a red boat. [^4]
@@ -157,6 +156,7 @@
 13. Find all sids of sailors who have a rating of 10 or have reserved boat 104[^13]
 14.  Find the names of sailors who have reserved boat 103[^14]
 15. Find the names of sailors who have reserved a red boat[^15]
+    
 [^1]:Use **DISTINCT** Keyword to eliminate duplicates
 [^2]: Use **WHERE CLAUSE** to Answer the Query.
 [^3]: use **WHERE CLAUSE** and DO Cartesian Product to Answer the Query and you have to display names of sailors only
