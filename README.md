@@ -140,4 +140,36 @@
 ![Reserves_InStances](boat.png)
 ### Boat Instances
 ![boat_instances](boat1.png)
+## Use the above database to Answer the following Questions
+1. Find the names and ages of all sailors.[^1]
+[^1]:Use **DISTINCT** Keyword to eliminate duplicates
+2. Find all sailors with a rating above 7.[^2]
+3. Find the names of sailors who have reserved boat number 103 [^3]
+4. Find the sids of sailors who have reserved a red boat. [^4]
+5. Find the names of sailors who have reserved a red boat. [^5]
+6. Find the colors of boats reserved by Lubber. [^6]
+7. Find the names of sailors who have reserved at least one boat. [^7]
+8. Compute increments for the ratings of persons who have sailed two different boats on the same day. [^8]
+9. Find the ages of sailors whose name begins and ends with B and has at least three characters.[^9]
+    [^2]: Use **WHERE CLAUSE** to Answer the Query.
+    [^3]: use **WHERE CLAUSE** and DO Cartesian Product to Answer the Query and you have to display names of sailors only
+    [^4]: use **WHERE CLAUSE** and DO Cartesian Product to Answer the Query and you have to display sids only
+    [^5]: use **WHERE CLAUSE** and do Cartesian product to answer the Query and display names only
+   [^6]: use **WHERE CLAUSE** and do Cartesian product to answer the Query and display colors of boat reserved by Lubber.
+   [^7]: use **WHERE CLAUSE** and do Cartesian product to answer the Query and display names of sailors only.
+   [^8]: Perform *rating+1* operation in SELECT CLAUSE, use **WHERE CLAUSE** and do Cartesian Product to answer the Query and dispaly names,
+   [^9]: use Pattern matching techiques in **WHERE CLAUSE** to implement it and ages only.
+10. Find the names of Sailors who reserved a red boat or a green boat[^10]
+11. Find the names of sailors who have reserved both a red and a green boat.[^11]
+12. Find the sids of all sailors who have reserved red boats but not green boats.[^12]
+[^10]: Implement the above Query in two ways. First way perform cartesian and use where clause effectively. second way you can implement **UNION** set Operations.
+[^11]:Implement the above Query in two ways. First way perform cartesian and use where clause effectively. second way you can implement **INTERSECT** set Operations.
+[^12]:Implement the above Query in two ways. First way perform cartesian and use where clause effectively. second way you can implement **MINUS** set Operations.
+13. Find all sids of sailors who have a rating of 10 or have reserved boat 104
+[^13]: Perform **UNION** Operation
+14.  Find the names of sailors who have reserved boat 103
+[^14]: Implement it using nested subqueries and use **IN** Operator
+15. Find the names of sailors who have reserved a red boat
+[^15]: implement it using multi nested subqueries and use **IN** Operator
+
 
