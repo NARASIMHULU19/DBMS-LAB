@@ -126,12 +126,14 @@
     3. [Dropping Views](https://www.oracletutorial.com/oracle-view/oracle-drop-view/)
 
 ## USE THE FOLLOWING RELATIONAL SCHEMA and its instances Complete Week-2 Lab Session
+<!--
 ### Company Relatinal Schema 
 ![COMPANY DATABASE SCHEMA](CompanyDB.png)
 ### Company Relational Instances
 ![COMAPANY_INSTANCES1](Company1.png)
 ![Company_Instances2](company2.png)
 ## Also Implement the Following Sailors Database
+-->
 ### Sailors Database Schema
 ![SailorsDB](Salors_DB.png)
 ### Sailors Instances
