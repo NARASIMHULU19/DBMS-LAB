@@ -158,6 +158,26 @@
 13. Find all sids of sailors who have a rating of 10 or have reserved boat 104[^13]
 14.  Find the names of sailors who have reserved boat 103[^14]
 15. Find the names of sailors who have reserved a red boat[^15]
+16.  Find the names of sailors who have reserved boat number 103 [^16]
+17.  Find sailors whose rating is better than some sailor called Horatio. [^17]
+18. Find sailors whose rating is better than every sailor called Horatio. [^18]
+19. Find the sailors with the highest rating. [^19]
+20. Find the names of sailors who have reserved both a red and a green boat. [^20]
+21. Find the names of sailors who have reserved all boats. [^21]
+22. Find the average age of all sailors. [^22]
+23. Find the average age of sailors with a rating of 10. [^23]
+24. Find the name and age of the oldest sailor. [^24]
+25. Count the number of sailors. [^25]
+26. Count the number of different sailor names. [^26]
+27. Find the names of sailors who are older than the oldest sailor with a rating of 10. [^27]
+28. Find the age of the youngest sailor for each rating level. [^28]
+29. Find the age of the youngest sailor who is eligible to vote (i.e., is at least 18 years old) for each rating level with at least two such sailors. [^29]
+30.  For each red boat, find the number of reservations for this boat.
+31.  Find the average age of sailors for each rating level that has at least two sailors.
+32.  Find the average age of sailors who are of voting age (i.e., at least 18 years old) for each rating level that has at least two sailors.
+33.  Find the average age of sailors who are of voting age (i.e., at least 18 years old) for each rating level that has at least two such sailors.
+34.  Find those ratings for which the average age of sailors is the minimum over all ratings.
+
     
 [^1]:Use **DISTINCT** Keyword to eliminate duplicates
 [^2]: Use **WHERE CLAUSE** to Answer the Query.
@@ -174,5 +194,27 @@
 [^13]: Perform **UNION** Operation
 [^14]: Implement it using nested subqueries and use **IN** Operator
 [^15]: implement it using multi nested subqueries and use **IN** Operator
+[^16]: Implement co-related subquery method using **EXISTS** operator.
+[^17]: use **>ANY** operator to solve the above question.
+[^18]: use **>ALL** operator to solve the above question.
+[^19]: use **>=ALL** Operator to solve the above question.
+[^20]: use **IN** and **Nested Query Method** to solve the above query.
+[^21]: Use **NOT EXIST**, **MINUS or Not using also** and **Co-related Nested Query** to solve the above query.
+[^22]: use **Aggregate AVG Function** to solve the above query.
+[^23]: use **Aggregate AVG Function** and **WHERE CLAUSE** to solve the above query.
+[^24]: use **Aggregate MAX Function in nested Query** to solve the above query.
+[^25]: use **Aggregate COUNT Function** to solve the above query.
+[^26]: use **Aggregate COUNT Function and DISTINCT Keyword** to solve the above query.
+[^27]: use **Aggregate AVG Function** and **WHERE CLAUSE** to solve the above query. In Addtion to that Solve the above query using **>ALL operator** to sovle the above query.
+[^28]: use **GROUP BY and MIN Function** to solve the above Query
+[^29]: use **GROUP BY, HAVING and MIN Function** to solve the above Query.
+
+
+
+
+
+
+
+
 
 
