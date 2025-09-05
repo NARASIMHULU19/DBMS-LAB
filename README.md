@@ -208,8 +208,177 @@
 [^27]: use **Aggregate AVG Function** and **WHERE CLAUSE** to solve the above query. In Addtion to that Solve the above query using **>ALL operator** to sovle the above query.
 [^28]: use **GROUP BY and MIN Function** to solve the above Query
 [^29]: use **GROUP BY, HAVING and MIN Function** to solve the above Query.
+# WEEK-3
+1. Queries using Conversion functions (to_char, to_number and to_date), string functions (Concatenation, lpad, rpad, ltrim, rtrim, lower, upper, initcap, length, substr and instr), date functions (Sysdate, next_day, add_months, last_day, months_between, least, greatest, trunc, round, to_char, to_date)
+2. Queries uisng creation of views and dropping of views
 
+## Oracle SQL Functions: Conversion, String, and Date
 
+Oracle SQL provides a powerful set of functions to manipulate data types, strings, and dates. This guide provides explanations and multiple examples for key functions.
+
+***
+
+### 1. Conversion Functions
+
+These functions are used to convert data from one data type to another.
+
+#### `TO_CHAR`
+
+This function converts a **number** or a **date** to a **character string**. It is extremely useful for formatting output.
+
+* **Syntax (for Dates):** `TO_CHAR(date, 'format_model')`
+* **Example 1: Formatting a Date**
+
+    ```sql
+    SELECT TO_CHAR(SYSDATE, 'YYYY-MM-DD HH24:MI:SS') AS "Current Time" FROM DUAL;
+    ```
+    **Explanation:** This converts the system date (`SYSDATE`) into a formatted string showing the year, month, day, and time in a 24-hour format.
+
+* **Example 2: Formatting a Number**
+
+    ```sql
+    SELECT TO_CHAR(1234567.89, '9,999,999.00') AS "Formatted Number" FROM DUAL;
+    ```
+    **Explanation:** This converts the number to a string with a thousands separator and two decimal places.
+
+#### `TO_NUMBER`
+
+This function converts a **character string** to a **number**.
+
+* **Syntax:** `TO_NUMBER(string)`
+* **Example:**
+
+    ```sql
+    SELECT TO_NUMBER('100.50') + 50 FROM DUAL;
+    ```
+    **Explanation:** The string `'100.50'` is converted to a number, allowing it to be used in a mathematical operation. The result is `150.50`.
+
+#### `TO_DATE`
+
+This function converts a **character string** to a **date** value.
+
+* **Syntax:** `TO_DATE(string, 'format_model')`
+* **Example:**
+
+    ```sql
+    SELECT TO_DATE('05-SEP-2025', 'DD-MON-YYYY') AS "My Date" FROM DUAL;
+    ```
+    **Explanation:** The string `'05-SEP-2025'` is converted to a date value according to the specified format model.
+
+***
+
+### 2. String Functions
+
+These functions are used for manipulating strings of text.
+
+#### `Concatenation`
+
+Joins two or more strings together. The `||` operator is the standard way to do this in Oracle SQL.
+
+* **Syntax:** `string1 || string2`
+* **Example:**
+
+    ```sql
+    SELECT 'First Name: ' || 'John' AS "Full Name" FROM DUAL;
+    ```
+    **Explanation:** This combines the two strings into a single string: `'First Name: John'`.
+
+#### `LPAD` and `RPAD`
+
+* `LPAD` (Left Pad): Pads a string on the left with a specified character to a desired length.
+    * **Example:** `SELECT LPAD('abc', 5, '*') AS "Padded String" FROM DUAL;` (Result: `'**abc'`)
+* `RPAD` (Right Pad): Pads a string on the right with a specified character to a desired length.
+    * **Example:** `SELECT RPAD('abc', 5, '*') AS "Padded String" FROM DUAL;` (Result: `'abc**'`)
+
+#### `LTRIM` and `RTRIM`
+
+* `LTRIM` (Left Trim): Removes leading characters from a string.
+    * **Example:** `SELECT LTRIM('  Hello World') AS "Trimmed String" FROM DUAL;` (Result: `'Hello World'`)
+* `RTRIM` (Right Trim): Removes trailing characters from a string.
+    * **Example:** `SELECT RTRIM('Hello World  ') AS "Trimmed String" FROM DUAL;` (Result: `'Hello World'`)
+
+#### `LOWER`, `UPPER`, and `INITCAP`
+
+* `LOWER`: Converts a string to lowercase.
+    * **Example:** `SELECT LOWER('HELLO') FROM DUAL;` (Result: `'hello'`)
+* `UPPER`: Converts a string to uppercase.
+    * **Example:** `SELECT UPPER('hello') FROM DUAL;` (Result: `'HELLO'`)
+* `INITCAP`: Converts the first letter of each word to uppercase and the rest to lowercase.
+    * **Example:** `SELECT INITCAP('hello world') FROM DUAL;` (Result: `'Hello World'`)
+
+#### `LENGTH`, `SUBSTR`, and `INSTR`
+
+* `LENGTH`: Returns the number of characters in a string.
+    * **Example:** `SELECT LENGTH('database') FROM DUAL;` (Result: `8`)
+* `SUBSTR` (Substring): Extracts a substring from a string.
+    * **Example:** `SELECT SUBSTR('Oracle', 1, 3) FROM DUAL;` (Result: `'Ora'`)
+* `INSTR` (In-string): Returns the starting position of a substring within a string.
+    * **Example:** `SELECT INSTR('database', 'base') FROM DUAL;` (Result: `5`)
+
+***
+
+### 3. Date Functions
+
+These functions are used for working with date and time values.
+
+#### `SYSDATE`
+
+Returns the current date and time of the database server.
+
+* **Example:** `SELECT SYSDATE FROM DUAL;`
+
+#### `NEXT_DAY`
+
+Returns the date of the first occurrence of a specified weekday after a given date.
+
+* **Example:**
+    ```sql
+    SELECT NEXT_DAY('05-SEP-2025', 'SUNDAY') AS "Next Sunday" FROM DUAL;
+    ```
+    **Explanation:** This will find the date of the first Sunday after September 5, 2025.
+
+#### `ADD_MONTHS`
+
+Adds a specified number of months to a date.
+
+* **Example:**
+    ```sql
+    SELECT ADD_MONTHS(SYSDATE, 6) AS "Six Months From Now" FROM DUAL;
+    ```
+
+#### `LAST_DAY`
+
+Returns the date of the last day of the month for a given date.
+
+* **Example:**
+    ```sql
+    SELECT LAST_DAY('05-SEP-2025') AS "Last Day of September" FROM DUAL;
+    ```
+
+#### `MONTHS_BETWEEN`
+
+Returns the number of months between two dates.
+
+* **Example:**
+    ```sql
+    SELECT MONTHS_BETWEEN(SYSDATE, '05-MAR-2025') AS "Months Between" FROM DUAL;
+    ```
+
+#### `LEAST` and `GREATEST`
+
+* `LEAST`: Returns the earliest date from a list of dates.
+    * **Example:** `SELECT LEAST('05-SEP-2025', '01-JAN-2025') FROM DUAL;` (Result: `'01-JAN-2025'`)
+* `GREATEST`: Returns the latest date from a list of dates.
+    * **Example:** `SELECT GREATEST('05-SEP-2025', '01-JAN-2025') FROM DUAL;` (Result: `'05-SEP-2025'`)
+
+#### `TRUNC` and `ROUND`
+
+* `TRUNC` (Truncate): Truncates a date to the specified unit (e.g., month, year).
+    * **Example:** `SELECT TRUNC(SYSDATE, 'MONTH') FROM DUAL;`
+    * **Explanation:** This will return the first day of the current month.
+* `ROUND`: Rounds a date to the specified unit.
+    * **Example:** `SELECT ROUND(SYSDATE, 'YEAR') FROM DUAL;`
+    * **Explanation:** This will return January 1st of the nearest year. For example, if it's June, it will round to the current year; if it's July, it will round to the next year.
 
 
 
