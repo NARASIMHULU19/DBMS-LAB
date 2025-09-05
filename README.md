@@ -177,8 +177,7 @@
 32.  Find the average age of sailors who are of voting age (i.e., at least 18 years old) for each rating level that has at least two sailors.
 33.  Find the average age of sailors who are of voting age (i.e., at least 18 years old) for each rating level that has at least two such sailors.
 34.  Find those ratings for which the average age of sailors is the minimum over all ratings.
-
-    
+  
 [^1]:Use **DISTINCT** Keyword to eliminate duplicates
 [^2]: Use **WHERE CLAUSE** to Answer the Query.
 [^3]: use **WHERE CLAUSE** and DO Cartesian Product to Answer the Query and you have to display names of sailors only
@@ -208,6 +207,8 @@
 [^27]: use **Aggregate AVG Function** and **WHERE CLAUSE** to solve the above query. In Addtion to that Solve the above query using **>ALL operator** to sovle the above query.
 [^28]: use **GROUP BY and MIN Function** to solve the above Query
 [^29]: use **GROUP BY, HAVING and MIN Function** to solve the above Query.
+### ---------------------------- END OF WEEK-2 LAB ----------------------------
+***
 # WEEK-3
 1. Queries using Conversion functions (to_char, to_number and to_date), string functions (Concatenation, lpad, rpad, ltrim, rtrim, lower, upper, initcap, length, substr and instr), date functions (Sysdate, next_day, add_months, last_day, months_between, least, greatest, trunc, round, to_char, to_date)
 2. Queries uisng creation of views and dropping of views
