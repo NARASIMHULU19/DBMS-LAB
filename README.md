@@ -380,7 +380,10 @@ Returns the number of months between two dates.
 * `ROUND`: Rounds a date to the specified unit.
     * **Example:** `SELECT ROUND(SYSDATE, 'YEAR') FROM DUAL;`
     * **Explanation:** This will return January 1st of the nearest year. For example, if it's June, it will round to the current year; if it's July, it will round to the next year.
- 
+
+## ------------------------------- END OF WEEK-4 LAB -----------------------------------------------------------------------------
+***
+
 ## WEEK-4
 1. Write SQL queries to perform JOIN OPERATIONS (i.e. CONDITIONALJOIN, EQUIJOIN, LEFT OUTER JOIN, RIGHT OUTER JOIN, FULL OUTERJOIN).
 
