@@ -406,7 +406,7 @@ Returns the number of months between two dates.
 14. Write a SQL Query to implement LEFT OUTER THETA JOIN between Student and Dept.
 15. Write a SQL Query to implement RIGHT OUTER THETA JOIN between Student and Dept.
 16. Write a SQL Query to implement FULL OUTER THETA JOIN between Student and Dept.
-
+17. Write a SQL Query to Implement CROSS JOIN between Student and Dept.
 ### ------------------------- END OF WEEK-4 LAB -------------------
 ***
 
