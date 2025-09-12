@@ -380,6 +380,32 @@ Returns the number of months between two dates.
 * `ROUND`: Rounds a date to the specified unit.
     * **Example:** `SELECT ROUND(SYSDATE, 'YEAR') FROM DUAL;`
     * **Explanation:** This will return January 1st of the nearest year. For example, if it's June, it will round to the current year; if it's July, it will round to the next year.
+ 
+## WEEK-4
+1. Write SQL queries to perform JOIN OPERATIONS (i.e. CONDITIONALJOIN, EQUIJOIN, LEFT OUTER JOIN, RIGHT OUTER JOIN, FULL OUTERJOIN).
+
+### Do the following things to carried out the lab
+1. Create a dept table having dno, dname as columns.
+2. Apply 'Primary Key Constraint and Foreign Key Constraint' to dept table
+1. Create a Student table having sid, sname, and did as columns.
+2. Apply Primary Key Constraint to **sid**, `NOT NULL` Constraint to **Sname**  and `Foreign Key Constraint` to **did** refers to dept table
+3. Insert all department details like cse, me, ce, eee, ece, csm, csd in the dept table.
+4. Insert atleast 10 rows in the student table, take values of your own
+5. Write a SQL Query to implement NATURAL JOIN between Student and Dept.
+6. Write a SQL Query to implement EQUI JOIN between Student and Dept.
+7. Write a SQL Query to implement THETA JOIN between Student and Dept.
+8. Write a SQL Query to implement LEFT OUTER NATURAL JOIN between Student and Dept.
+9. Write a SQL Query to implement  RIGHT OUTER NATURAL JOIN between Student and Dept.
+10. Write a SQL Query to implement FULL OUTER NATURAL JOIN between Student and Dept.
+11. Write a SQL Query to implement LEFT OUTER EQUI JOIN between Student and Dept.
+12. Write a SQL Query to implement RIGHT OUTER EQUI JOIN between Student and Dept.
+13. Write a SQL Query to implement FULL OUTER EQUI JOIN between Student and Dept.
+14. Write a SQL Query to implement LEFT OUTER THETA JOIN between Student and Dept.
+15. Write a SQL Query to implement RIGHT OUTER THETA JOIN between Student and Dept.
+16. Write a SQL Query to implement FULL OUTER THETA JOIN between Student and Dept.
+
+### ------------------------- END OF WEEK-4 LAB --------------------------------
+***
 
 
 
