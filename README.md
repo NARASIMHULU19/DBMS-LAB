@@ -407,6 +407,7 @@ Returns the number of months between two dates.
 15. Write a SQL Query to implement RIGHT OUTER CONDITIONAL  JOIN between Student and Dept.
 16. Write a SQL Query to implement FULL OUTER CONDITIONAL  JOIN between Student and Dept.
 17. Write a SQL Query to Implement CROSS JOIN between Student and Dept.
+18. Try and Practice how to apply these above JOIN OPERATIONS for the Queries Asked in WEEK 2 Experiment (Do not Considered for LAB Obeservation and Record Only for Practicing Purpose)
 ### ------------------------- END OF WEEK-4 LAB -------------------
 ***
 
