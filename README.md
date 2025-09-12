@@ -396,16 +396,16 @@ Returns the number of months between two dates.
 4. Insert atleast 10 rows in the student table, take values of your own
 5. Write a SQL Query to implement NATURAL JOIN between Student and Dept.
 6. Write a SQL Query to implement EQUI JOIN between Student and Dept.
-7. Write a SQL Query to implement THETA JOIN between Student and Dept.
+7. Write a SQL Query to implement CONDITIONAL JOIN between Student and Dept.
 8. Write a SQL Query to implement LEFT OUTER NATURAL JOIN between Student and Dept.
 9. Write a SQL Query to implement  RIGHT OUTER NATURAL JOIN between Student and Dept.
 10. Write a SQL Query to implement FULL OUTER NATURAL JOIN between Student and Dept.
 11. Write a SQL Query to implement LEFT OUTER EQUI JOIN between Student and Dept.
 12. Write a SQL Query to implement RIGHT OUTER EQUI JOIN between Student and Dept.
 13. Write a SQL Query to implement FULL OUTER EQUI JOIN between Student and Dept.
-14. Write a SQL Query to implement LEFT OUTER THETA JOIN between Student and Dept.
-15. Write a SQL Query to implement RIGHT OUTER THETA JOIN between Student and Dept.
-16. Write a SQL Query to implement FULL OUTER THETA JOIN between Student and Dept.
+14. Write a SQL Query to implement LEFT OUTER CONDITIONAL  JOIN between Student and Dept.
+15. Write a SQL Query to implement RIGHT OUTER CONDITIONAL  JOIN between Student and Dept.
+16. Write a SQL Query to implement FULL OUTER CONDITIONAL  JOIN between Student and Dept.
 17. Write a SQL Query to Implement CROSS JOIN between Student and Dept.
 ### ------------------------- END OF WEEK-4 LAB -------------------
 ***
