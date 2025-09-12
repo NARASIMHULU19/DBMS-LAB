@@ -381,7 +381,7 @@ Returns the number of months between two dates.
     * **Example:** `SELECT ROUND(SYSDATE, 'YEAR') FROM DUAL;`
     * **Explanation:** This will return January 1st of the nearest year. For example, if it's June, it will round to the current year; if it's July, it will round to the next year.
 
-## ------------------------------- END OF WEEK-4 LAB -----------------------------------------------------------------------------
+## ------------------------------- END OF WEEK-4 LAB ----------------
 ***
 
 ## WEEK-4
@@ -407,7 +407,7 @@ Returns the number of months between two dates.
 15. Write a SQL Query to implement RIGHT OUTER THETA JOIN between Student and Dept.
 16. Write a SQL Query to implement FULL OUTER THETA JOIN between Student and Dept.
 
-### ------------------------- END OF WEEK-4 LAB --------------------------------
+### ------------------------- END OF WEEK-4 LAB -------------------
 ***
 
 
