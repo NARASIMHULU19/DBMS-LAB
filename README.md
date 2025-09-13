@@ -381,7 +381,7 @@ Returns the number of months between two dates.
     * **Example:** `SELECT ROUND(SYSDATE, 'YEAR') FROM DUAL;`
     * **Explanation:** This will return January 1st of the nearest year. For example, if it's June, it will round to the current year; if it's July, it will round to the next year.
 
-## ------------------------------- END OF WEEK-4 LAB ----------------
+## ------------------------------- END OF WEEK-3 LAB ----------------
 ***
 
 ## WEEK-4
@@ -389,7 +389,7 @@ Returns the number of months between two dates.
 
 ### Do the following things to carried out the lab
 1. Create a dept table having dno, dname as columns.
-2. Apply 'Primary Key Constraint and Foreign Key Constraint' to dept table
+2. Apply 'Primary Key Constraint' for **dno** and `NOT NULL Constraint` for **dname** to dept table
 1. Create a Student table having sid, sname, and did as columns.
 2. Apply Primary Key Constraint to **sid**, `NOT NULL` Constraint to **Sname**  and `Foreign Key Constraint` to **did** refers to dept table
 3. Insert all department details like cse, me, ce, eee, ece, csm, csd in the dept table.
