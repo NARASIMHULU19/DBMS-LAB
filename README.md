@@ -445,7 +445,53 @@ Create the logical data model using E-R diagrams
  * **Insert sample data into the tables.**
  * **Write SQL queries to retrieve specific information, such as all orders for a particular customer, the current inventory levels, etc.**
  * **Create views to simplify complex queries.**
- 
+
+ ## Additional Experiment-1
+ ### Implement student database and create a sequence to add student ids Automatically
+ To implement a student database and automatically generate student IDs using a sequence, we can follow these steps in Oracle SQL:
+
+ * **STEP-1: Create the Student Table**
+ sql```
+CREATE TABLE students (
+    student_id NUMBER PRIMARY KEY,
+    name VARCHAR2(100),
+    email VARCHAR2(100),
+    dob DATE,
+    course VARCHAR2(100)
+);```
+* **Step-2: Create a Sequence**
+sql```
+CREATE SEQUENCE student_seq
+START WITH 1
+INCREMENT BY 1
+NOCACHE
+NOCYCLE;```
+
+* **Step 3: Create a Trigger (Optional but recommended)**
+triger```
+CREATE OR REPLACE TRIGGER trg_student_id
+BEFORE INSERT ON students
+FOR EACH ROW
+BEGIN
+    SELECT student_seq.NEXTVAL INTO :NEW.student_id FROM dual;
+END;
+/```
+
+* **Step 4: Insert Sample Data (Without mentioning student_id)**
+sql```
+INSERT INTO students (name, email, dob, course)
+VALUES ('John Doe', 'john.doe@example.com', TO_DATE('2003-06-15', 'YYYY-MM-DD'), 'Computer Science');
+
+INSERT INTO students (name, email, dob, course)
+VALUES ('Jane Smith', 'jane.smith@example.com', TO_DATE('2002-12-20', 'YYYY-MM-DD'), 'Electronics');```
+
+* **step 5: Step 5: View the Data**
+sql```
+SELECT * FROM students;```
+
+
+
+
 
 
 
