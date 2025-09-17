@@ -451,45 +451,101 @@ Create the logical data model using E-R diagrams
  To implement a student database and automatically generate student IDs using a sequence, we can follow these steps in Oracle SQL:
 
  * **STEP-1: Create the Student Table**
- sql```
+   
+ ```
 CREATE TABLE students (
     student_id NUMBER PRIMARY KEY,
     name VARCHAR2(100),
     email VARCHAR2(100),
     dob DATE,
     course VARCHAR2(100)
-);```
+);
+```
 * **Step-2: Create a Sequence**
-sql```
+```
 CREATE SEQUENCE student_seq
 START WITH 1
 INCREMENT BY 1
 NOCACHE
-NOCYCLE;```
-
+NOCYCLE;
+```
 * **Step 3: Create a Trigger (Optional but recommended)**
-triger```
+```
 CREATE OR REPLACE TRIGGER trg_student_id
 BEFORE INSERT ON students
 FOR EACH ROW
 BEGIN
     SELECT student_seq.NEXTVAL INTO :NEW.student_id FROM dual;
 END;
-/```
-
+/
+```
 * **Step 4: Insert Sample Data (Without mentioning student_id)**
-sql```
+```
 INSERT INTO students (name, email, dob, course)
 VALUES ('John Doe', 'john.doe@example.com', TO_DATE('2003-06-15', 'YYYY-MM-DD'), 'Computer Science');
 
 INSERT INTO students (name, email, dob, course)
-VALUES ('Jane Smith', 'jane.smith@example.com', TO_DATE('2002-12-20', 'YYYY-MM-DD'), 'Electronics');```
-
+VALUES ('Jane Smith', 'jane.smith@example.com', TO_DATE('2002-12-20', 'YYYY-MM-DD'), 'Electronics');
+```
 * **step 5: Step 5: View the Data**
-sql```
-SELECT * FROM students;```
+```
+SELECT * FROM students;
+```
 
+## Additonal Experiment 2:
+### Implement Materialized Views for Precomputed Data
+**Implementing Materialized Views in Oracle helps precompute and store the results of complex queries (especially those involving joins or aggregations), which improves performance for repeated access.**
 
+**What is a Materialized View?**
+A Materialized View (MV) is a physical copy of the result set of a query that is stored in a database and can be refreshed periodically.
+* **Step 1: Create the Materialized View**
+```
+CREATE MATERIALIZED VIEW mv_student_course_count
+BUILD IMMEDIATE
+REFRESH COMPLETE
+START WITH SYSDATE
+NEXT SYSDATE + 1
+AS
+SELECT course, COUNT(*) AS total_students
+FROM students
+GROUP BY course;
+```
+* **Step 2: Query the Materialized View**
+```
+SELECT * FROM mv_student_course_count;
+```
+* **Step 3: Manual Refresh (Optional)**
+```
+EXEC DBMS_MVIEW.REFRESH('mv_student_course_count');
+```
+
+* **optional: Fast Refresh (Requires MV Log)**
+
+If you want fast refresh, create a materialized view log on the base table:
+
+```
+CREATE MATERIALIZED VIEW LOG ON students
+WITH ROWID, SEQUENCE (course)
+INCLUDING NEW VALUES;
+```
+**Then create the MV like this:**
+
+```
+CREATE MATERIALIZED VIEW mv_student_course_count
+BUILD IMMEDIATE
+REFRESH FAST
+ON COMMIT
+AS
+SELECT course, COUNT(*) AS total_students
+FROM students
+GROUP BY course;
+```
+
+### Use Cases of Materialized Views
+1. Dashboards (pre-aggregated KPIs)
+2. Offline analytics
+3. Heavy joins across large tables
+4. Reporting in BI tools
 
 
 
