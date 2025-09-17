@@ -410,6 +410,42 @@ Returns the number of months between two dates.
 18. Try and Practice how to apply these above JOIN OPERATIONS for the Queries Asked in WEEK 2 Experiment (Do not Considered for LAB Obeservation and Record Only for Practicing Purpose)
 ### ------------------------- END OF WEEK-4 LAB -------------------
 ***
+## WEEK-5
+1.  Create a simple PL/SQL program which includes declaration section, executable section and exception –Handling section (Ex. Student marks can be selected from the table and printed for those who secured first class and an exception can be raised if no records were found)
+2.  Insert data into student table and use COMMIT, ROLLBACK and SAVEPOINT in PL/SQL block.
+
+## WEEK-6
+1.  Develop a program that includes the features NESTED IF, CASE and CASE expression. The program can be extended using the NULLIF and COALESCE functions.
+2.  Program development using WHILE LOOPS, numeric FOR LOOPS, nested loops using ERROR Handling, BUILT –IN Exceptions, USE defined Exceptions, RAISE-APPLICATION ERROR.
+
+
+## WEEK-7
+1. Programs development using creation of procedures, passing parameters IN and OUT of PROCEDURES
+2. Program development using creation of stored functions, invoke functions in SQL Statements and write complex functions.
+
+## WEEK-8
+## Develop programs using features parameters in a CURSOR, FOR UPDATE CURSOR, WHERE CURRENT of clause and CURSOR variables.
+
+## WEEK-9
+### Develop Programs using BEFORE and AFTER Triggers, Row and Statement Triggers and INSTEAD OF Triggers.
+
+## WEEK-10
+### Create a table and perform the search operation on table using indexing and non-indexing techniques
+
+## WEEK-11
+### A publishing company produces scientific books on various subjects. The books are written by authors who specialize in one particular subject. The company employs editors who, not necessarily being specialists in a particular area, each take sole responsibility for editing one or more publications. A publication covers essentially one of the specialist subjects and is normally written by a single author. When writing a particular book, each author works with on editor, but may submit another work for publication to be supervised by other editors. To improve their competitiveness, the company tries to employ a variety of authors, more than one author being a specialist in a particular subject for the above case study, do thefollowing: 
+1. **Analyze the datarequired**
+2. **Normalize theattributes.**
+Create the logical data model using E-R diagrams
+
+## WEEK-12
+### A new e-commerce startup needs a database to manage its products, customers, orders, and inventory. Hence develop the database with following:
+ * **Design the database schema using Entity-Relationship (ER) diagrams.**
+ * **Create the database and tables using SQL.**
+ * **Insert sample data into the tables.**
+ * **Write SQL queries to retrieve specific information, such as all orders for a particular customer, the current inventory levels, etc.**
+ * **Create views to simplify complex queries.**
+ 
 
 
 
