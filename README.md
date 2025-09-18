@@ -517,6 +517,81 @@ SELECT * FROM student
 1.  Develop a program that includes the features NESTED IF, CASE and CASE expression. The program can be extended using the NULLIF and COALESCE functions.
 2.  Program development using WHILE LOOPS, numeric FOR LOOPS, nested loops using ERROR Handling, BUILT –IN Exceptions, USE defined Exceptions, RAISE-APPLICATION ERROR.
 
+### To Implement the above Features like NESTED IF, CASE and CASE expression, NULLIF, and COALESCE functions
+### Implement the following Code to complete the Week-6 Exp-1 Activity
+```
+DECLARE
+v_student_name VARCHAR2(50) := 'John Doe';
+v_marks
+NUMBER := NULL; -- Assuming NULL as initial marks value
+v_grade
+CHAR(1);
+v_previous_marks NUMBER := 85;
+v_final_marks NUMBER;
+BEGIN
+-- Using COALaESCE to provide a default value for NULL marks
+v_marks := COALESCE(v_marks, 50);
+-- If marks are NULL, assign a default value of 50
+-- NESTED IF to determine grade based on marks
+IF v_marks >= 90 THEN
+v_grade := 'A';
+ELSIF v_marks >= 80 THEN
+IF v_marks < 90 THEN
+v_grade := 'B';
+END IF;
+ELSIF v_marks >= 70 THEN
+v_grade := 'C';
+ELSIF v_marks >= 60 THEN
+v_grade := 'D';
+ELSE
+v_grade := 'F'; -- Fail
+END IF;
+-- CASE statement to handle grades assignment
+CASE
+WHEN v_grade = 'A' THEN
+DBMS_OUTPUT.PUT_LINE('Excellent! Grade A.');
+WHEN v_grade = 'B' THEN
+DBMS_OUTPUT.PUT_LINE('Very Good! Grade B.');
+WHEN v_grade = 'C' THEN
+DBMS_OUTPUT.PUT_LINE('Good! Grade C.');
+WHEN v_grade = 'D' THEN
+DBMS_OUTPUT.PUT_LINE('Fair! Grade D.');
+WHEN v_grade = 'F' THEN
+DBMS_OUTPUT.PUT_LINE('Needs Improvement. Fail.');
+ELSE
+DBMS_OUTPUT.PUT_LINE('No grade available.');
+END CASE;
+-- CASE Expression to determine grade using CASE (alternative to NESTED IF)
+v_grade := CASE
+WHEN v_marks >= 90 THEN 'A'
+WHEN v_marks >= 80 THEN 'B'
+WHEN v_marks >= 70 THEN 'C'
+WHEN v_marks >= 60 THEN 'D'
+ELSE 'F'
+END;
+-- Output based on CASE expression
+DBMS_OUTPUT.PUT_LINE('Student ' || v_student_name || ' scored ' || v_marks || ' and
+received Grade: ' || v_grade);
+-- Using NULLIF to set v_final_marks to NULL if previous marks and current marks are the same
+v_final_marks := NULLIF(v_marks, v_previous_marks);
+-- If v_marks = v_previous_marks, result will be NULL
+-- Output based on NULLIF result
+IF v_final_marks IS NULL THEN
+DBMS_OUTPUT.PUT_LINE('Marks have not changed.');
+ELSE
+DBMS_OUTPUT.PUT_LINE('Final marks: ' || v_final_marks);
+END IF;
+EXCEPTION
+-- Exception handling
+WHEN OTHERS THEN
+DBMS_OUTPUT.PUT_LINE('An unexpected error occurred: ' || SQLERRM);
+END;
+```
+### Exp-2 in Week-6
+-- Need to update
+
+
+
 
 ## WEEK-7
 1. Programs development using creation of procedures, passing parameters IN and OUT of PROCEDURES
