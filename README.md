@@ -1,8 +1,8 @@
-# DBMS-LAB {#top}
+# DBMS-LAB 
 
 ## 1 [USE THE ORACLE SQL LOGIN](https://www.oracle.com/database/technologies/oracle-live-sql/)
 ## 2 [SRIT ORACLE SQL LOGIN SESSION](http://localhost:8080/apex/f?p=4550:1:1238993382107458)
-## 3 [WEEK-1](#WEEk1)
+## 3 [WEEK-1](#WEEK1)
 ## 4 [WEEK-2](#WEEK-2)
 ## 5 [WEEK-3](#WEEK-3)
 ## 6 [WEEK-4](#WEEK-4)
