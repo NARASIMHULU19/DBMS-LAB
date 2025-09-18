@@ -414,6 +414,105 @@ Returns the number of months between two dates.
 1.  Create a simple PL/SQL program which includes declaration section, executable section and exception –Handling section (Ex. Student marks can be selected from the table and printed for those who secured first class and an exception can be raised if no records were found)
 2.  Insert data into student table and use COMMIT, ROLLBACK and SAVEPOINT in PL/SQL block.
 
+### To Implement a Simple PL/SQL Program Do the following things
+
+**STEP-1:** CREATE A STUDENT TABEL AS FOLLOWS  
+```
+CREATE TABLE Student(
+    studentID NUMBER PRIMARY KEY,
+    StudentName VARCHAR2(50),
+    Marks NUMBER
+);
+```
+**STEP-2:** INSERT the values into student Using Simple PL/SQL block
+```
+BEGIN
+    INSERT INTO student VALUES(501, 'Rajesh', 62);
+    INSERT INTO student VALUES(502,'Abhilash',58);
+    INSERT INTO student VALUES(503, 'Bhanu', 75);
+	INSERT INTO student VALUES(504, 'Raju', 48);
+    INSERT INTO student VALUES(505, 'Williams', 61);
+END;
+```
+**STEP-3:** DISPLAY the Values of the table
+```
+SELECT * FROM student;
+```
+**STEP-4:** Implement the Following PL/SQL code 
+```
+DECLARE
+-- Declaration Section
+v_student_id Student.StudentID%TYPE;
+v_student_name Student.StudentName%TYPE;
+v_marks Student.Marks%TYPE;
+v_count NUMBER := 0; -- Variable to track if records are found
+-- Exception for no records found
+e_no_records_found EXCEPTION;
+BEGIN
+-- Executable Section
+DBMS_OUTPUT.PUT_LINE('Students who secured first class (marks >= 60):');
+FOR student_rec IN (SELECT StudentID, StudentName, Marks
+FROM Student
+WHERE Marks >= 60)
+LOOP
+v_count := v_count + 1; -- Increment counter when records are found
+-- Print student details
+DBMS_OUTPUT.PUT_LINE('Student ID: ' || student_rec.StudentID ||', Name: ' || student_rec.StudentName ||
+', Marks: ' || student_rec.Marks);
+END LOOP;
+-- If no records found, raise the exception
+IF v_count = 0 THEN
+RAISE e_no_records_found;
+END IF;
+EXCEPTION
+-- Exception Handling Section
+WHEN e_no_records_found THEN
+DBMS_OUTPUT.PUT_LINE('No records found for students with first class marks.');
+WHEN OTHERS THEN
+DBMS_OUTPUT.PUT_LINE('An unexpected error occurred: ' || SQLERRM);
+END;
+```
+**STEP-5:** Remove student who get marks above 60 and Again execute the PL/SQL COde  
+
+### HOW to Insert data into student table and use COMMIT, ROLLBACK and SAVEPOINT in PL/SQL block. 
+### DO the Follwing Activities
+**STEP-1:** Implement the Following PL/SQL Code  and Run the Code
+```BEGIN
+-- Inserting records into the Students table
+INSERT INTO Student (StudentID, StudentName, Marks)
+VALUES (101, 'John Doe', 75);
+-- Save the transaction at this point
+SAVEPOINT first_save;
+INSERT INTO Student (StudentID, StudentName, Marks)
+VALUES (201, 'Jane Smith', 85);
+-- Save another point after the second insertion
+SAVEPOINT second_save;
+INSERT INTO Student (StudentID, StudentName, Marks)
+VALUES (301, 'Alice Johnson', 50);
+-- Rollback to the second_save point, this will remove the the record for Alice Johnson
+ROLLBACK TO second_save;
+-- Inserting another record after rollback
+INSERT INTO Student (StudentID, StudentName, Marks)
+VALUES (401, 'Bob Brown', 65);
+-- Commit the transaction to finalize changes
+COMMIT;
+-- Display a message indicating successful transaction
+DBMS_OUTPUT.PUT_LINE('Transaction committed successfully.');
+EXCEPTION
+-- Exception handling: rollback everything if any error occurs
+WHEN OTHERS THEN
+DBMS_OUTPUT.PUT_LINE('An error occurred: ' || SQLERRM);
+ROLLBACK; 
+-- Rollback the entire transaction
+ROLLBACK; -- Rollback the entire transaction
+END;
+```
+**STEP-2:** Display the Result Using Select 
+```
+SELECT * FROM student
+```
+## ----------- END OF WEEK-5 LAB --------------
+***
 ## WEEK-6
 1.  Develop a program that includes the features NESTED IF, CASE and CASE expression. The program can be extended using the NULLIF and COALESCE functions.
 2.  Program development using WHILE LOOPS, numeric FOR LOOPS, nested loops using ERROR Handling, BUILT –IN Exceptions, USE defined Exceptions, RAISE-APPLICATION ERROR.
