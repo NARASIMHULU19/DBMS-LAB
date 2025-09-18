@@ -2,6 +2,7 @@
 
 ## 1 [USE THE ORACLE SQL LOGIN](https://www.oracle.com/database/technologies/oracle-live-sql/)
 ## 2 [SRIT ORACLE SQL LOGIN SESSION](http://localhost:8080/apex/f?p=4550:1:1238993382107458)
+## 3 [WEEK-1](#WEEk)
 
 
 # SQL ETHICS
@@ -33,7 +34,7 @@
 - [UPDATE](https://www.oracletutorial.com/oracle-basics/oracle-update/)
 - [DELETE](https://www.oracletutorial.com/oracle-basics/oracle-delete/)
 
-# WEEK1: DESIGN THE DATA BASE of the FOLLOWING
+# WEEK1: DESIGN THE DATA BASE of the FOLLOWING {#WEEK1}
 ![DB1](DBD1.png)
 ![DB2](DBD3.png)
 ![DB3](DBD2.png)
