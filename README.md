@@ -3,11 +3,11 @@
 ## 1 [USE THE ORACLE SQL LOGIN](https://www.oracle.com/database/technologies/oracle-live-sql/)
 ## 2 [SRIT ORACLE SQL LOGIN SESSION](http://localhost:8080/apex/f?p=4550:1:1238993382107458)
 ## 3 [WEEK-1](#week1)
-## 4 [WEEK-2](#WEEK-2)
-## 5 [WEEK-3](#WEEK-3)
-## 6 [WEEK-4](#WEEK-4)
-## 7 [WEEK-5](#WEEK-5)
-## 8 [WEEK-6](#WEEK-6)
+## 4 [WEEK-2](#w-2)
+## 5 [WEEK-3](#w-3)
+## 6 [WEEK-4](#w-4)
+## 7 [WEEK-5](#w-5)
+## 8 [WEEK-6](#w-6)
 
 
 # SQL ETHICS
@@ -92,7 +92,7 @@
 ## VIVA VOCE [10 Marks] 
 ### ---------------------------------- END OF WEEK-1 LAB ----------------------------
 ***
-# WEEK-2 {#WEEK-2}
+# WEEK-2 {#w-2}
 1.   Queries (along with sub-Queries) using ANY, ALL, IN, EXISTS, NOTEXISTS, UNION, INTERSET, Constraints. Example - Select the roll number and name of the student who secured fourth rank in the class.
 2. Queries using Aggregate functions (COUNT, SUM, AVG, MAX and MIN), GROUP BY, HAVING and Creation and dropping of Views.
 
@@ -215,7 +215,7 @@
 [^29]: use **GROUP BY, HAVING and MIN Function** to solve the above Query.
 ### ---------------------------- END OF WEEK-2 LAB ----------------------------
 ***
-# WEEK-3 {#WEEK-3}
+# WEEK-3 {#w-3}
 1. Queries using Conversion functions (to_char, to_number and to_date), string functions (Concatenation, lpad, rpad, ltrim, rtrim, lower, upper, initcap, length, substr and instr), date functions (Sysdate, next_day, add_months, last_day, months_between, least, greatest, trunc, round, to_char, to_date)
 2. Queries uisng creation of views and dropping of views
 
