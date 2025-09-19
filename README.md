@@ -2,6 +2,8 @@
 
 ## 1 [USE THE ORACLE SQL LOGIN](https://www.oracle.com/database/technologies/oracle-live-sql/)
 ## 2 [SRIT ORACLE SQL LOGIN SESSION](http://localhost:8080/apex/f?p=4550:1:1238993382107458)
+
+# LIST OF EXPERIMENTS
 ## 3 [WEEK 1](#WEEK-1)
 ## 4 [WEEK 2](#WEEK-2)
 ## 5 [WEEK-3](#WEEK-3)
@@ -16,6 +18,9 @@
 ## 14 [WEEK-12](#WEEK-12)
 ## 15 [Additional Experiment-1](#Additional-Experiment-1)
 ## 16 [Additional Experiment-2](#Additional-Experiment-2)
+## 17 [Additional Experiment-3](#Additional-Experiment-3)
+## 18 [Additional Experiment-4](#Additional-Experiment-4)
+## 19 [Additional Experiment-5](#Additional-Experiment-5)
 
 
 
@@ -101,7 +106,7 @@
 ## VIVA VOCE [10 Marks] 
 ### ---------------------------------- END OF WEEK-1 LAB ----------------------------
 ***
-# WEEK-2 [](#DBMS-LAB)
+# [WEEK-2](#DBMS-LAB)
 1.   Queries (along with sub-Queries) using ANY, ALL, IN, EXISTS, NOTEXISTS, UNION, INTERSET, Constraints. Example - Select the roll number and name of the student who secured fourth rank in the class.
 2. Queries using Aggregate functions (COUNT, SUM, AVG, MAX and MIN), GROUP BY, HAVING and Creation and dropping of Views.
 
@@ -224,7 +229,7 @@
 [^29]: use **GROUP BY, HAVING and MIN Function** to solve the above Query.
 ### ---------------------------- END OF WEEK-2 LAB ----------------------------
 ***
-# WEEK-3 
+# [WEEK-3](#DBMS-LAB) 
 1. Queries using Conversion functions (to_char, to_number and to_date), string functions (Concatenation, lpad, rpad, ltrim, rtrim, lower, upper, initcap, length, substr and instr), date functions (Sysdate, next_day, add_months, last_day, months_between, least, greatest, trunc, round, to_char, to_date)
 2. Queries uisng creation of views and dropping of views
 
@@ -399,7 +404,7 @@ Returns the number of months between two dates.
 ## ------------------------------- END OF WEEK-3 LAB ----------------
 ***
 
-## WEEK-4 
+## [WEEK-4](#DBMS-LAB) 
 1. Write SQL queries to perform JOIN OPERATIONS (i.e. CONDITIONALJOIN, EQUIJOIN, LEFT OUTER JOIN, RIGHT OUTER JOIN, FULL OUTERJOIN).
 
 ### Do the following things to carried out the lab
@@ -425,7 +430,7 @@ Returns the number of months between two dates.
 18. Try and Practice how to apply these above JOIN OPERATIONS for the Queries Asked in WEEK 2 Experiment (Do not Considered for LAB Obeservation and Record Only for Practicing Purpose)
 ### ------------------------- END OF WEEK-4 LAB -------------------
 ***
-## WEEK-5 
+## [WEEK-5](#DBMS-LAB) 
 1.  Create a simple PL/SQL program which includes declaration section, executable section and exception –Handling section (Ex. Student marks can be selected from the table and printed for those who secured first class and an exception can be raised if no records were found)
 2.  Insert data into student table and use COMMIT, ROLLBACK and SAVEPOINT in PL/SQL block.
 
@@ -528,7 +533,7 @@ SELECT * FROM student
 ```
 ## ----------- END OF WEEK-5 LAB --------------
 ***
-## WEEK-6 
+## [WEEK-6](#DBMS-LAB) 
 1.  Develop a program that includes the features NESTED IF, CASE and CASE expression. The program can be extended using the NULLIF and COALESCE functions.
 2.  Program development using WHILE LOOPS, numeric FOR LOOPS, nested loops using ERROR Handling, BUILT –IN Exceptions, USE defined Exceptions, RAISE-APPLICATION ERROR.
 
@@ -608,26 +613,26 @@ END;
 
 
 
-## WEEK-7
+## [WEEK-7](#DBMS-LAB) 
 1. Programs development using creation of procedures, passing parameters IN and OUT of PROCEDURES
 2. Program development using creation of stored functions, invoke functions in SQL Statements and write complex functions.
 
-## WEEK-8
+## [WEEK-8](#DBMS-LAB) 
 ## Develop programs using features parameters in a CURSOR, FOR UPDATE CURSOR, WHERE CURRENT of clause and CURSOR variables.
 
-## WEEK-9
+## [WEEK-9](#DBMS-LAB) 
 ### Develop Programs using BEFORE and AFTER Triggers, Row and Statement Triggers and INSTEAD OF Triggers.
 
-## WEEK-10
+## [WEEK-10](#DBMS-LAB) 
 ### Create a table and perform the search operation on table using indexing and non-indexing techniques
 
-## WEEK-11
+## [WEEK-11](#DBMS-LAB) 
 ### A publishing company produces scientific books on various subjects. The books are written by authors who specialize in one particular subject. The company employs editors who, not necessarily being specialists in a particular area, each take sole responsibility for editing one or more publications. A publication covers essentially one of the specialist subjects and is normally written by a single author. When writing a particular book, each author works with on editor, but may submit another work for publication to be supervised by other editors. To improve their competitiveness, the company tries to employ a variety of authors, more than one author being a specialist in a particular subject for the above case study, do thefollowing: 
 1. **Analyze the datarequired**
 2. **Normalize theattributes.**
 Create the logical data model using E-R diagrams
 
-## WEEK-12
+## [WEEK-12](#DBMS-LAB) 
 ### A new e-commerce startup needs a database to manage its products, customers, orders, and inventory. Hence develop the database with following:
  * **Design the database schema using Entity-Relationship (ER) diagrams.**
  * **Create the database and tables using SQL.**
@@ -635,7 +640,7 @@ Create the logical data model using E-R diagrams
  * **Write SQL queries to retrieve specific information, such as all orders for a particular customer, the current inventory levels, etc.**
  * **Create views to simplify complex queries.**
 
- ## Additional Experiment 1
+ ## [Additional Experiment 1](#DBMS-LAB) 
  ### Implement student database and create a sequence to add student ids Automatically
  To implement a student database and automatically generate student IDs using a sequence, we can follow these steps in Oracle SQL:
 
@@ -681,7 +686,7 @@ VALUES ('Jane Smith', 'jane.smith@example.com', TO_DATE('2002-12-20', 'YYYY-MM-D
 SELECT * FROM students;
 ```
 
-## Additonal Experiment 2:
+## [Additonal Experiment 2:](#DBMS-LAB) 
 ### Implement Materialized Views for Precomputed Data
 **Implementing Materialized Views in Oracle helps precompute and store the results of complex queries (especially those involving joins or aggregations), which improves performance for repeated access.**
 
@@ -736,6 +741,9 @@ GROUP BY course;
 3. Heavy joins across large tables
 4. Reporting in BI tools
 
+## [Additonal Experiment 3:](#DBMS-LAB) 
+## [Additonal Experiment 4:](#DBMS-LAB) 
+## [Additonal Experiment 5:](#DBMS-LAB) 
 
 
 
