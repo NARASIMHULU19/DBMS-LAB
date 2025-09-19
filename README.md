@@ -673,7 +673,56 @@ END;
 ## [WEEK-7](#DBMS-LAB) 
 1. Programs development using creation of procedures, passing parameters IN and OUT of PROCEDURES
 2. Program development using creation of stored functions, invoke functions in SQL Statements and write complex functions.
+## To Implement Procedure by Passing IN and OUT parameters Do the following activities.
+1. Create a Procedure to calculate total marks, average marks and Grade of a students
+2. Run the above Procedure using Anonymous PL/SQL Block
+### STEP-1 Creating Student Procedure to evaluate a Student
+```plsql
+-- Creating the procedure
+CREATE OR REPLACE PROCEDURE calc_student_result (
+    mark1 IN NUMBER,
+    mark2 IN NUMBER,
+    mark3 IN NUMBER,
+    total OUT NUMBER,
+    average OUT NUMBER,
+    grade OUT VARCHAR2
+) AS
+BEGIN
+    -- Calculate total and average
+    total := mark1 + mark2 + mark3;
+    average := total / 3;
 
+    -- Determine grade
+    IF average >= 90 THEN
+        grade := 'A';
+    ELSIF average >= 75 THEN
+        grade := 'B';
+    ELSIF average >= 60 THEN
+        grade := 'C';
+    ELSIF average >= 50 THEN
+        grade := 'D';
+    ELSE
+        grade := 'F';
+    END IF;
+END;
+```
+### STEP-2: Implement PLSQL anonymous block to execute the Proceudre
+```plsql
+DECLARE
+    t NUMBER;
+    avg1 NUMBER;
+    g VARCHAR2(3);
+BEGIN
+    -- Call the procedure with IN values and OUT variables
+calc_student_result(85, 78, 92, t, avg1, g);
+
+    -- Display output
+    DBMS_OUTPUT.PUT_LINE('Total: ' || t);
+    DBMS_OUTPUT.PUT_LINE('Average: ' || avg1);
+    DBMS_OUTPUT.PUT_LINE('Grade: ' || g);
+END;
+```
+## ------------------------------------------------- END of WEEK-7 LAB -------------------------------------------------
 ## [WEEK-8](#DBMS-LAB) 
 ## Develop programs using features parameters in a CURSOR, FOR UPDATE CURSOR, WHERE CURRENT of clause and CURSOR variables.
 
