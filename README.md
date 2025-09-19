@@ -14,8 +14,8 @@
 ## 12 [WEEK-10](#WEEK-10)
 ## 13 [WEEK-11](#WEEK-11)
 ## 14 [WEEK-12](#WEEK-12)
-## 15 [Additional Experiment-1](Additional-Experiment-1)
-## 16 [[Additional Experiment-2](Additional-Experiment-2)
+## 15 [Additional Experiment-1](#Additional-Experiment-1)
+## 16 [Additional Experiment-2](#Additional-Experiment-2)
 
 
 
@@ -635,7 +635,7 @@ Create the logical data model using E-R diagrams
  * **Write SQL queries to retrieve specific information, such as all orders for a particular customer, the current inventory levels, etc.**
  * **Create views to simplify complex queries.**
 
- ## Additional Experiment-1
+ ## Additional Experiment 1
  ### Implement student database and create a sequence to add student ids Automatically
  To implement a student database and automatically generate student IDs using a sequence, we can follow these steps in Oracle SQL:
 
