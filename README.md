@@ -4,10 +4,10 @@
 ## 2 [SRIT ORACLE SQL LOGIN SESSION](http://localhost:8080/apex/f?p=4550:1:1238993382107458)
 ## 3 [WEEK 1](#WEEK-1)
 ## 4 [WEEK 2](#WEEK-2)
-## 5 [WEEK-3](#w-3)
-## 6 [WEEK-4](#w-4)
-## 7 [WEEK-5](#w-5)
-## 8 [WEEK-6](#w-6)
+## 5 [WEEK-3](#WEEK-3)
+## 6 [WEEK-4](#WEEK-4)
+## 7 [WEEK-5](#WEEK-5)
+## 8 [WEEK-6](#WEEK-6)
 
 
 # SQL ETHICS
