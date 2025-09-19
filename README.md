@@ -215,7 +215,7 @@
 [^29]: use **GROUP BY, HAVING and MIN Function** to solve the above Query.
 ### ---------------------------- END OF WEEK-2 LAB ----------------------------
 ***
-# WEEK-3 {#w-3}
+# WEEK-3 
 1. Queries using Conversion functions (to_char, to_number and to_date), string functions (Concatenation, lpad, rpad, ltrim, rtrim, lower, upper, initcap, length, substr and instr), date functions (Sysdate, next_day, add_months, last_day, months_between, least, greatest, trunc, round, to_char, to_date)
 2. Queries uisng creation of views and dropping of views
 
@@ -390,7 +390,7 @@ Returns the number of months between two dates.
 ## ------------------------------- END OF WEEK-3 LAB ----------------
 ***
 
-## WEEK-4 {#WEEK-4}
+## WEEK-4 
 1. Write SQL queries to perform JOIN OPERATIONS (i.e. CONDITIONALJOIN, EQUIJOIN, LEFT OUTER JOIN, RIGHT OUTER JOIN, FULL OUTERJOIN).
 
 ### Do the following things to carried out the lab
@@ -416,7 +416,7 @@ Returns the number of months between two dates.
 18. Try and Practice how to apply these above JOIN OPERATIONS for the Queries Asked in WEEK 2 Experiment (Do not Considered for LAB Obeservation and Record Only for Practicing Purpose)
 ### ------------------------- END OF WEEK-4 LAB -------------------
 ***
-## WEEK-5 {#WEEK-5}
+## WEEK-5 
 1.  Create a simple PL/SQL program which includes declaration section, executable section and exception –Handling section (Ex. Student marks can be selected from the table and printed for those who secured first class and an exception can be raised if no records were found)
 2.  Insert data into student table and use COMMIT, ROLLBACK and SAVEPOINT in PL/SQL block.
 
@@ -519,7 +519,7 @@ SELECT * FROM student
 ```
 ## ----------- END OF WEEK-5 LAB --------------
 ***
-## WEEK-6 {#WEEK-6}
+## WEEK-6 
 1.  Develop a program that includes the features NESTED IF, CASE and CASE expression. The program can be extended using the NULLIF and COALESCE functions.
 2.  Program development using WHILE LOOPS, numeric FOR LOOPS, nested loops using ERROR Handling, BUILT –IN Exceptions, USE defined Exceptions, RAISE-APPLICATION ERROR.
 
