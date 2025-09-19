@@ -8,6 +8,13 @@
 ## 6 [WEEK-4](#WEEK-4)
 ## 7 [WEEK-5](#WEEK-5)
 ## 8 [WEEK-6](#WEEK-6)
+## 9 [WEEK-7](#WEEK-7)
+## 10 [WEEK-8](#WEEK-8)
+## 11 [WEEK-9](#WEEK-9)
+## 12 [WEEK-10](#WEEK-10)
+## 13 [WEEK-11](#WEEK-11)
+## 14 [WEEK-12](#WEEK-12)
+
 
 
 # SQL ETHICS
