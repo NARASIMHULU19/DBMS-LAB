@@ -102,7 +102,7 @@
    16. Remove **pupil, course and section** table so that it exist in recycle bin
    17. Remove **Grade_Report & Prerequisites** table permanently
 ## VIVA VOCE [10 Marks] 
-### ---------------------------------- END OF WEEK-1 LAB ----------------------------
+### ---------------------------------- END OF WEEK-1 LAB -----------------
 ***
 # [WEEK-2](#DBMS-LAB)
 1.   Queries (along with sub-Queries) using ANY, ALL, IN, EXISTS, NOTEXISTS, UNION, INTERSET, Constraints. Example - Select the roll number and name of the student who secured fourth rank in the class.
