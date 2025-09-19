@@ -607,7 +607,66 @@ END;
 ```
 ### Exp-2 in Week-6
 -- Need to update
+#### Use the following code to do EXP-2 in WEEK-6
+```plsql
+DECLARE
+    -- Variables for factorial calculation
+    num        NUMBER := 5;
+    factorial  NUMBER := 1;
+    i          NUMBER := 1;
 
+    -- Custom Exception
+    ex_negative_input EXCEPTION;
+
+BEGIN
+    DBMS_OUTPUT.PUT_LINE('--- Multiplication Tables from 1 to 5 ---');
+
+    -- Using nested FOR loops
+    FOR t IN 1 .. 5 LOOP
+        DBMS_OUTPUT.PUT_LINE('Table of ' || t);
+        FOR m IN 1 .. 10 LOOP
+            DBMS_OUTPUT.PUT_LINE(t || ' x ' || m || ' = ' || (t * m));
+        END LOOP;
+        DBMS_OUTPUT.PUT_LINE('-----------------------------');
+    END LOOP;
+
+    -- User-defined exception for negative input
+    IF num < 0 THEN
+        RAISE ex_negative_input;
+    END IF;
+
+    -- WHILE loop to calculate factorial
+    WHILE i <= num LOOP
+        factorial := factorial * i;
+        i := i + 1;
+    END LOOP;
+
+    DBMS_OUTPUT.PUT_LINE('Factorial of ' || num || ' is: ' || factorial);
+
+    -- Example of built-in exception (ZERO_DIVIDE)
+    DECLARE
+        x NUMBER := 10;
+        y NUMBER := 0;
+        z NUMBER;
+    BEGIN
+        z := x / y; -- will cause ZERO_DIVIDE exception
+        DBMS_OUTPUT.PUT_LINE('Division Result: ' || z);
+    EXCEPTION
+        WHEN ZERO_DIVIDE THEN
+            DBMS_OUTPUT.PUT_LINE('Error: Division by zero is not allowed.');
+    END;
+
+EXCEPTION
+    WHEN ex_negative_input THEN
+        RAISE_APPLICATION_ERROR(-20001, 'Negative number entered for factorial. Not allowed.');
+
+    WHEN OTHERS THEN
+        DBMS_OUTPUT.PUT_LINE('Unexpected Error: ' || SQLERRM);
+
+END;
+```
+## ------------------------------------------------ END of WEEK-6 ---------------------------------------------
+***
 
 
 
