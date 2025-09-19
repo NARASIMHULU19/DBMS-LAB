@@ -1,14 +1,14 @@
 # DBMS-LAB 
 
-## 1 [USE THE ORACLE SQL LOGIN](https://www.oracle.com/database/technologies/oracle-live-sql/)
-## 2 [SRIT ORACLE SQL LOGIN SESSION](http://localhost:8080/apex/f?p=4550:1:1238993382107458)
+## 1. [USE THE ORACLE SQL LOGIN](https://www.oracle.com/database/technologies/oracle-live-sql/)
+## 2. [SRIT ORACLE SQL LOGIN SESSION](http://localhost:8080/apex/f?p=4550:1:1238993382107458)
 
 # LIST OF EXPERIMENTS
 ## 1. [WEEK 1](#WEEK-1)
 ## 2. [WEEK 2](#WEEK-2)
 ## 3. [WEEK-3](#WEEK-3)
 ## 4. [WEEK-4](#WEEK-4)
-## 6. [WEEK-5](#WEEK-5)
+## 5. [WEEK-5](#WEEK-5)
 ## 6. [WEEK-6](#WEEK-6)
 ## 7. [WEEK-7](#WEEK-7)
 ## 8.  [WEEK-8](#WEEK-8)
@@ -21,8 +21,6 @@
 ## 15. [Additional Experiment-3](#Additional-Experiment-3)
 ## 16. [Additional Experiment-4](#Additional-Experiment-4)
 ## 17. [Additional Experiment-5](#Additional-Experiment-5)
-
-
 
 # SQL ETHICS
 1. ALL Keywords/Reserved Words must be Capital letters
