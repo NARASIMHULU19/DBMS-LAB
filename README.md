@@ -818,7 +818,99 @@ END;
 ***
 ## [WEEK-9](#DBMS-LAB) 
 ### Develop Programs using BEFORE and AFTER Triggers, Row and Statement Triggers and INSTEAD OF Triggers.
+#### Do the Following Activities to implement the above Program
+### STEP-1: Implement the Employee Table and Audit_log Table
+```sql
+CREATE TABLE employees (
+    emp_id   NUMBER PRIMARY KEY,
+    emp_name VARCHAR2(100),
+    salary   NUMBER
+);
+```
+```sql
+CREATE TABLE audit_log (
+    log_id     NUMBER GENERATED ALWAYS AS IDENTITY PRIMARY KEY,
+    action     VARCHAR2(10),
+    emp_id     NUMBER,
+    log_time   TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+```
+### STEP-2: Implement Row-level Trigger before Insertion (BEFORE ROW Trigger – Validate Salary Before Insert)
+```plsql
+CREATE OR REPLACE TRIGGER trg_before_insert_emp
+BEFORE INSERT ON employees
+FOR EACH ROW
+BEGIN
+    IF :NEW.salary < 1000 THEN
+        RAISE_APPLICATION_ERROR(-20001, 'Salary must be at least 1000');
+    END IF;
+END;
+```
+### STEP-3: Adding log information in the audit log table using ROW Trigger After Inserting a Record.
+```plsql
+CREATE OR REPLACE TRIGGER trg_before_insert_emp
+BEFORE INSERT ON employees
+FOR EACH ROW
+BEGIN
+    IF :NEW.salary < 1000 THEN
+        RAISE_APPLICATION_ERROR(-20001, 'Salary must be at least 1000');
+    END IF;
+END;
+```
+### STEP-4:  STATEMENT-LEVEL Trigger BEFORE INSERT – (Fires Once Before INSERT)
+```plsql
+CREATE OR REPLACE TRIGGER trg_before_insert_stmt
+BEFORE INSERT ON employees
+BEGIN
+    DBMS_OUTPUT.PUT_LINE('--- BEFORE INSERT STATEMENT Trigger Fired ---');
+END;
+```
+### STEP-5: STATEMENT-LEVEL Trigger AFTER Insert – Fires Once After INSERT
+```plsql
+CREATE OR REPLACE TRIGGER trg_after_insert_stmt
+AFTER INSERT ON employees
+BEGIN
+    DBMS_OUTPUT.PUT_LINE('>> AFTER INSERT STATEMENT Trigger Fired');
+END;
+```
+### STEP-6: TESTING THE TRIGGERS
+```Plsql
+BEGIN
+-- Enable output (run this only once in SQL*Plus or SQL Developer)
+SET SERVEROUTPUT ON;
+INSERT INTO employees (emp_id, emp_name, salary)
+VALUES (301, 'Alice', 1500);
 
+INSERT INTO employees (emp_id, emp_name, salary)
+VALUES (302, 'Bob', 2200);
+
+INSERT INTO employees (emp_id, emp_name, salary)
+VALUES (304, 'Carol', 1800);
+
+INSERT INTO employees (emp_id, emp_name, salary)
+VALUES (305, 'David', 2600);
+SELECT * FROM employees;
+SELECT * FROM audit_log;
+END;
+```
+### STEP-7: Implementing Triggers on View Using INSTEAD OF 
+#### STEP-7.1: Create View
+```sql
+CREATE OR REPLACE VIEW emp_view AS
+SELECT emp_id, emp_name FROM employees;
+```
+#### STEP-7.2: INSTEAD OF Trigger for View
+```plsql
+CREATE OR REPLACE TRIGGER trg_instead_of_insert_emp_view
+INSTEAD OF INSERT ON emp_view
+FOR EACH ROW
+BEGIN
+    INSERT INTO employees(emp_id, emp_name, salary)
+    VALUES (:NEW.emp_id, :NEW.emp_name, 1000);  -- default salary
+END;
+```
+## ------------------------------------------------------- END OF WEEK-9 --------------------------------------------------
+***
 ## [WEEK-10](#DBMS-LAB) 
 ### Create a table and perform the search operation on table using indexing and non-indexing techniques
 
