@@ -724,8 +724,98 @@ END;
 ```
 ## ------------------------------------------------- END of WEEK-7 LAB -------------------------------------------------
 ## [WEEK-8](#DBMS-LAB) 
-## Develop programs using features parameters in a CURSOR, FOR UPDATE CURSOR, WHERE CURRENT of clause and CURSOR variables.
+### Develop programs using features parameters in a CURSOR, FOR UPDATE CURSOR, WHERE CURRENT of clause and CURSOR variables.
+### The Following Steps is carried out to immpement the following:
+### STEP-1: Create EMP Table (Similar to Oracle’s default EMP table)
+```sql
+CREATE TABLE emp (
+    empno    NUMBER(4) PRIMARY KEY,
+    ename    VARCHAR2(10),
+    job      VARCHAR2(9),
+    mgr      NUMBER(4),
+    hiredate DATE,
+    sal      NUMBER(7,2),
+    comm     NUMBER(7,2),
+    deptno   NUMBER(2)
+);
+```
+### STEP-2: Insert Sample Data into EMP Using PL/SQL CODE
+```
+BEGIN
+INSERT INTO emp VALUES (7369, 'SMITH',  'CLERK',     7902, TO_DATE('17-DEC-1980','DD-MON-YYYY'), 800,  NULL, 20);
+INSERT INTO emp VALUES (7499, 'ALLEN',  'SALESMAN',  7698, TO_DATE('20-FEB-1981','DD-MON-YYYY'), 1600, 300,  30);
+INSERT INTO emp VALUES (7521, 'WARD',   'SALESMAN',  7698, TO_DATE('22-FEB-1981','DD-MON-YYYY'), 1250, 500,  30);
+INSERT INTO emp VALUES (7566, 'JONES',  'MANAGER',   7839, TO_DATE('02-APR-1981','DD-MON-YYYY'), 2975, NULL, 20);
+INSERT INTO emp VALUES (7698, 'BLAKE',  'MANAGER',   7839, TO_DATE('01-MAY-1981','DD-MON-YYYY'), 2850, NULL, 30);
+INSERT INTO emp VALUES (7782, 'CLARK',  'MANAGER',   7839, TO_DATE('09-JUN-1981','DD-MON-YYYY'), 2450, NULL, 10);
+INSERT INTO emp VALUES (7788, 'SCOTT',  'ANALYST',   7566, TO_DATE('19-APR-1987','DD-MON-YYYY'), 3000, NULL, 20);
+INSERT INTO emp VALUES (7839, 'KING',   'PRESIDENT', NULL, TO_DATE('17-NOV-1981','DD-MON-YYYY'), 5000, NULL, 10);
+INSERT INTO emp VALUES (7844, 'TURNER', 'SALESMAN',  7698, TO_DATE('08-SEP-1981','DD-MON-YYYY'), 1500,   0, 30);
+INSERT INTO emp VALUES (7900, 'JAMES',  'CLERK',     7698, TO_DATE('03-DEC-1981','DD-MON-YYYY'), 950,  NULL, 30);
+INSERT INTO emp VALUES (7902, 'FORD',   'ANALYST',   7566, TO_DATE('03-DEC-1981','DD-MON-YYYY'), 3000, NULL, 20);
+INSERT INTO emp VALUES (7934, 'MILLER', 'CLERK',     7782, TO_DATE('23-JAN-1982','DD-MON-YYYY'), 1300, NULL, 10);
+COMMIT;
+END;
+```
+### STEP-3:  CREATE Cursor with Parameters 
+```plsql
+DECLARE
+    CURSOR emp_cursor(p_deptno NUMBER) IS
+        SELECT empno, ename, sal FROM emp WHERE deptno = p_deptno;
 
+    v_empno emp.empno%TYPE;
+    v_ename emp.ename%TYPE;
+    v_sal   emp.sal%TYPE;
+BEGIN
+    DBMS_OUTPUT.PUT_LINE('--- Employees in Dept 10 ---');
+    FOR emp_rec IN emp_cursor(10) LOOP
+        DBMS_OUTPUT.PUT_LINE('Emp No: ' || emp_rec.empno || ', Name: ' || emp_rec.ename || ', Salary: ' || emp_rec.sal);
+    END LOOP;
+END;
+```
+### STEP-4: FOR UPDATE Cursor with WHERE CURRENT OF (It Means Create a Cursor to do Update Activity)
+```plsql
+DECLARE
+    CURSOR cur_emp IS
+        SELECT empno, sal FROM emp WHERE deptno = 20 FOR UPDATE;
+
+    v_new_sal emp.sal%TYPE;
+BEGIN
+    FOR emp_rec IN cur_emp LOOP
+        v_new_sal := emp_rec.sal * 1.10;
+
+        UPDATE emp
+        SET sal = v_new_sal
+        WHERE CURRENT OF cur_emp;
+    END LOOP;
+
+    COMMIT;
+    DBMS_OUTPUT.PUT_LINE('Salaries updated for employees in dept 20.');
+END;
+```
+### STEP-5: Implement Cursor Variables Using REF CURSOR
+```plsql
+DECLARE
+    TYPE emp_ref_cursor IS REF CURSOR;
+    emp_cv emp_ref_cursor;
+
+    v_empno emp.empno%TYPE;
+    v_ename emp.ename%TYPE;
+    v_sal   emp.sal%TYPE;
+BEGIN
+    OPEN emp_cv FOR SELECT empno, ename, sal FROM emp WHERE deptno = 30;
+
+    LOOP
+        FETCH emp_cv INTO v_empno, v_ename, v_sal;
+        EXIT WHEN emp_cv%NOTFOUND;
+        DBMS_OUTPUT.PUT_LINE('Emp No: ' || v_empno || ', Name: ' || v_ename || ', Salary: ' || v_sal);
+    END LOOP;
+
+    CLOSE emp_cv;
+END;
+```
+## ------------------------------------ END OF LAB of WEEK-8 -------------------------------------------------
+***
 ## [WEEK-9](#DBMS-LAB) 
 ### Develop Programs using BEFORE and AFTER Triggers, Row and Statement Triggers and INSTEAD OF Triggers.
 
