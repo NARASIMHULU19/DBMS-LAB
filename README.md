@@ -722,7 +722,7 @@ calc_student_result(85, 78, 92, t, avg1, g);
     DBMS_OUTPUT.PUT_LINE('Grade: ' || g);
 END;
 ```
-## ------------------------------------------------- END of WEEK-7 LAB ----------------------------------
+## ------------------------------------------------- END of WEEK-7 LAB -----------------
 ## [WEEK-8](#DBMS-LAB) 
 ### Develop programs using features parameters in a CURSOR, FOR UPDATE CURSOR, WHERE CURRENT of clause and CURSOR variables.
 ### The Following Steps is carried out to immpement the following:
