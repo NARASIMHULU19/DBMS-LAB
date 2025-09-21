@@ -4,7 +4,7 @@
 ## 2. [SRIT ORACLE SQL LOGIN SESSION](http://localhost:8080/apex/f?p=4550:1:1238993382107458)
 
 # LIST OF EXPERIMENTS
-## 1. [WEEK 1](https://github.com/NARASIMHULU19/DBMS-LAB/#WEEK-1)
+## 1. [WEEK 1](#WEEK-1)
 ## 2. [WEEK 2](#WEEK-2)
 ## 3. [WEEK-3](#WEEK-3)
 ## 4. [WEEK-4](#WEEK-4)
@@ -31,7 +31,7 @@
 ## List of Experiments
 [DBMS LAB_SYLLABUS](DBMS_LAB_SYLLABUS.pdf).
 
-## [WEEK-1](#DBMS-LAB) 
+## WEEK-1 {#week11} 
 1. Write SQL queries to CREATE TABLES for various databases using DDL commands (i.e. CREATE, ALTER, DROP, TRUNCATE).
 2. Write SQL queries to MANIPULATE TABLES for various databases using DML commands (i.e. INSERT, SELECT, UPDATE, DELETE,).
 
