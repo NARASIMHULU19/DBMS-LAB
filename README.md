@@ -991,7 +991,7 @@ To return to the original state (without index), drop it:
 ```
 DROP INDEX idx_course;
 ```
-## ------------------------------------------------ END OF WEEK-10 LAB ---------------------------------
+## ------------------------------------------------ END OF WEEK-10 LAB ---------------------
 ***
 ## [WEEK-11](#DBMS-LAB) 
 ### A publishing company produces scientific books on various subjects. The books are written by authors who specialize in one particular subject. The company employs editors who, not necessarily being specialists in a particular area, each take sole responsibility for editing one or more publications. A publication covers essentially one of the specialist subjects and is normally written by a single author. When writing a particular book, each author works with on editor, but may submit another work for publication to be supervised by other editors. To improve their competitiveness, the company tries to employ a variety of authors, more than one author being a specialist in a particular subject for the above case study, do thefollowing: 
