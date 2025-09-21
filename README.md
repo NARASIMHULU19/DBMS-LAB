@@ -4,7 +4,7 @@
 ## 2. [SRIT ORACLE SQL LOGIN SESSION](http://localhost:8080/apex/f?p=4550:1:1238993382107458)
 
 # LIST OF EXPERIMENTS
-## 1. [WEEK 1](#WEEK-1)
+## 1. [WEEK 1](#W1)
 ## 2. [WEEK 2](#WEEK-2)
 ## 3. [WEEK-3](#WEEK-3)
 ## 4. [WEEK-4](#WEEK-4)
@@ -51,7 +51,7 @@
 - [UPDATE](https://www.oracletutorial.com/oracle-basics/oracle-update/)
 - [DELETE](https://www.oracletutorial.com/oracle-basics/oracle-delete/)
 
-# WEEK1: DESIGN THE DATA BASE of the FOLLOWING 
+# WEEK1: DESIGN THE DATA BASE of the FOLLOWING {#w1}
 ![DB1](DBD1.png)
 ![DB2](DBD3.png)
 ![DB3](DBD2.png)
@@ -66,7 +66,7 @@
    
 ## Viva Voce [10 Marks] [Link](https://forms.gle/c6j46VGtdedejy2W9)
 
-# WEEK-1 (COntinuation)
+# WEEK-1 (COntinuation) 
 ## Constraints for the above Database
 1. Primary Key Constraints for the Following Attributes
    1. Student_number for student table
