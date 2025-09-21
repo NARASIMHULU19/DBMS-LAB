@@ -814,7 +814,7 @@ BEGIN
     CLOSE emp_cv;
 END;
 ```
-## ------------------------------------ END OF LAB of WEEK-8 -------------------------------------------------
+## ------------------------------------ END OF LAB of WEEK-8 ---------------------------------------
 ***
 ## [WEEK-9](#DBMS-LAB) 
 ### Develop Programs using BEFORE and AFTER Triggers, Row and Statement Triggers and INSTEAD OF Triggers.
@@ -924,9 +924,7 @@ BEGIN
     END LOOP;
 END;
 ```
-## -------------------------------------------------END OF WEEK-8 LAB -----------------------------------------
-***
-## ------------------------------------------------------- END OF WEEK-9 -------------------------------------
+## -------------------------------------------------END OF WEEK-9 LAB ---------------------------------
 ***
 ## [WEEK-10](#DBMS-LAB) 
 ### Create a table and perform the search operation on table using indexing and non-indexing techniques
