@@ -102,7 +102,7 @@
    16. Remove **pupil, course and section** table so that it exist in recycle bin
    17. Remove **Grade_Report & Prerequisites** table permanently
 ## VIVA VOCE [10 Marks] 
-### ---------------------------------- END OF WEEK-1 LAB ---------------------------------------------------------------
+### ---------------------------------- END OF WEEK-1 LAB ------------------------------------------------------
 ***
 # [WEEK-2](#DBMS-LAB)
 1.   Queries (along with sub-Queries) using ANY, ALL, IN, EXISTS, NOTEXISTS, UNION, INTERSET, Constraints. Example - Select the roll number and name of the student who secured fourth rank in the class.
@@ -225,7 +225,7 @@
 [^27]: use **Aggregate AVG Function** and **WHERE CLAUSE** to solve the above query. In Addtion to that Solve the above query using **>ALL operator** to sovle the above query.
 [^28]: use **GROUP BY and MIN Function** to solve the above Query
 [^29]: use **GROUP BY, HAVING and MIN Function** to solve the above Query.
-### ---------------------------- END OF WEEK-2 LAB ----------------------------
+### ---------------------------- END OF WEEK-2 LAB ---------------------------------------------------------
 ***
 # [WEEK-3](#DBMS-LAB) 
 1. Queries using Conversion functions (to_char, to_number and to_date), string functions (Concatenation, lpad, rpad, ltrim, rtrim, lower, upper, initcap, length, substr and instr), date functions (Sysdate, next_day, add_months, last_day, months_between, least, greatest, trunc, round, to_char, to_date)
@@ -399,7 +399,7 @@ Returns the number of months between two dates.
     * **Example:** `SELECT ROUND(SYSDATE, 'YEAR') FROM DUAL;`
     * **Explanation:** This will return January 1st of the nearest year. For example, if it's June, it will round to the current year; if it's July, it will round to the next year.
 
-## ------------------------------- END OF WEEK-3 LAB ----------------
+## ------------------------------- END OF WEEK-3 LAB --------------------------------------------------------
 ***
 
 ## [WEEK-4](#DBMS-LAB) 
@@ -426,7 +426,7 @@ Returns the number of months between two dates.
 16. Write a SQL Query to implement FULL OUTER CONDITIONAL  JOIN between Student and Dept.
 17. Write a SQL Query to Implement CROSS JOIN between Student and Dept.
 18. Try and Practice how to apply these above JOIN OPERATIONS for the Queries Asked in WEEK 2 Experiment (Do not Considered for LAB Obeservation and Record Only for Practicing Purpose)
-### ------------------------- END OF WEEK-4 LAB -------------------
+### ------------------------- END OF WEEK-4 LAB --------------------------------------------------
 ***
 ## [WEEK-5](#DBMS-LAB) 
 1.  Create a simple PL/SQL program which includes declaration section, executable section and exception –Handling section (Ex. Student marks can be selected from the table and printed for those who secured first class and an exception can be raised if no records were found)
@@ -529,7 +529,7 @@ END;
 ```
 SELECT * FROM student
 ```
-## ----------- END OF WEEK-5 LAB --------------
+## ----------- END OF WEEK-5 LAB ---------------------------------------------------------------------
 ***
 ## [WEEK-6](#DBMS-LAB) 
 1.  Develop a program that includes the features NESTED IF, CASE and CASE expression. The program can be extended using the NULLIF and COALESCE functions.
@@ -665,7 +665,7 @@ EXCEPTION
 
 END;
 ```
-## ------------------------------------------------ END of WEEK-6 ---------------------------------------------
+## ------------------------------------------------ END of WEEK-6 ----------------------------------------
 ***
 
 
@@ -722,7 +722,7 @@ calc_student_result(85, 78, 92, t, avg1, g);
     DBMS_OUTPUT.PUT_LINE('Grade: ' || g);
 END;
 ```
-## ------------------------------------------------- END of WEEK-7 LAB -------------------------------------------------
+## ------------------------------------------------- END of WEEK-7 LAB ----------------------------------
 ## [WEEK-8](#DBMS-LAB) 
 ### Develop programs using features parameters in a CURSOR, FOR UPDATE CURSOR, WHERE CURRENT of clause and CURSOR variables.
 ### The Following Steps is carried out to immpement the following:
@@ -924,7 +924,7 @@ BEGIN
     END LOOP;
 END;
 ```
-## -------------------------------------------------END OF WEEK-9 LAB ---------------------------------
+## -----------------------------------------END OF WEEK-9 LAB ---------------------------------
 ***
 ## [WEEK-10](#DBMS-LAB) 
 ### Create a table and perform the search operation on table using indexing and non-indexing techniques
