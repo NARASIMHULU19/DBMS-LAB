@@ -4,7 +4,7 @@
 ## 2. [SRIT ORACLE SQL LOGIN SESSION](http://localhost:8080/apex/f?p=4550:1:1238993382107458)
 
 # LIST OF EXPERIMENTS
-## 1. [WEEK 1](#W1)
+## 1. [WEEK 1](#WEEK-1)
 ## 2. [WEEK 2](#WEEK-2)
 ## 3. [WEEK-3](#WEEK-3)
 ## 4. [WEEK-4](#WEEK-4)
