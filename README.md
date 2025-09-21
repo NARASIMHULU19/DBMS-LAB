@@ -928,7 +928,71 @@ END;
 ***
 ## [WEEK-10](#DBMS-LAB) 
 ### Create a table and perform the search operation on table using indexing and non-indexing techniques
+### Step 1: Create the students Table
+This table stores student details including course name.  
+```
+CREATE TABLE students (
+    student_id   NUMBER PRIMARY KEY,
+    student_name VARCHAR2(100),
+    course       VARCHAR2(50),
+    phone        VARCHAR2(15)
+);
+```
+## Step 2: Insert Sample Data
+We will insert 10,000 student records with random course names for testing.  
+```
+BEGIN
+    FOR i IN 1..10000 LOOP
+        INSERT INTO students (student_id, student_name, course, phone)
+        VALUES (
+            i,
+            'Student_' || i,
+            CASE MOD(i, 3)
+                WHEN 0 THEN 'B.Sc'
+                WHEN 1 THEN 'B.Com'
+                ELSE 'B.A'
+            END,
+            '99999' || LPAD(i, 5, '0')
+        );
+    END LOOP;
+    COMMIT;
+END;
+/
+```
+## Step 3: Search Without Index (Non-Indexed)  
+We will now search for students enrolled in `B.Sc` **without any index.**  
+```
+EXPLAIN PLAN FOR
+SELECT * FROM students WHERE course = 'B.Sc';
 
+```
+Then, display the execution plan:
+```
+SELECT * FROM TABLE(DBMS_XPLAN.DISPLAY);
+```
+## Step 4: Create an Index on course Column
+Now, create an index to speed up the search.  
+```
+CREATE INDEX idx_course ON students(course);
+
+```
+## Step 5: Search With Index (Indexed)
+Repeat the same search. This time, Oracle should use the index.  
+```
+EXPLAIN PLAN FOR
+SELECT * FROM students WHERE course = 'B.Sc';
+```
+Then, re display the execution plan:
+```
+SELECT * FROM TABLE(DBMS_XPLAN.DISPLAY);
+```
+## Remove the Indexing
+To return to the original state (without index), drop it:
+```
+DROP INDEX idx_course;
+```
+## ------------------------------------------------ END OF WEEK-10 LAB ---------------------------------
+***
 ## [WEEK-11](#DBMS-LAB) 
 ### A publishing company produces scientific books on various subjects. The books are written by authors who specialize in one particular subject. The company employs editors who, not necessarily being specialists in a particular area, each take sole responsibility for editing one or more publications. A publication covers essentially one of the specialist subjects and is normally written by a single author. When writing a particular book, each author works with on editor, but may submit another work for publication to be supervised by other editors. To improve their competitiveness, the company tries to employ a variety of authors, more than one author being a specialist in a particular subject for the above case study, do thefollowing: 
 1. **Analyze the datarequired**
