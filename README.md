@@ -909,7 +909,24 @@ BEGIN
     VALUES (:NEW.emp_id, :NEW.emp_name, 1000);  -- default salary
 END;
 ```
-## ------------------------------------------------------- END OF WEEK-9 --------------------------------------------------
+#### STEP-7.3: Write a PL/SQL block to test the view
+```
+BEGIN
+    -- Insert via the view (should trigger INSTEAD OF INSERT trigger)
+    INSERT INTO emp_view (emp_id, emp_name) VALUES (401, 'ViewUser1');
+    INSERT INTO emp_view (emp_id, emp_name) VALUES (402, 'ViewUser2');
+    
+    DBMS_OUTPUT.PUT_LINE('View inserts executed successfully.');
+    
+    -- Select from base table to confirm insertion
+    FOR rec IN (SELECT emp_id, emp_name, salary FROM employees WHERE emp_id IN (401, 402)) LOOP
+        DBMS_OUTPUT.PUT_LINE('ID: ' || rec.emp_id || ', Name: ' || rec.emp_name || ', Salary: ' || rec.salary);
+    END LOOP;
+END;
+```
+## -------------------------------------------------END OF WEEK-8 LAB -----------------------------------------
+***
+## ------------------------------------------------------- END OF WEEK-9 -------------------------------------
 ***
 ## [WEEK-10](#DBMS-LAB) 
 ### Create a table and perform the search operation on table using indexing and non-indexing techniques
