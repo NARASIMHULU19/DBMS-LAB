@@ -31,7 +31,7 @@
 ## List of Experiments
 [DBMS LAB_SYLLABUS](DBMS_LAB_SYLLABUS.pdf).
 
-## My Heading Greatings {#custom-id}
+## [WEEK-1](#DBMS-LAB)
 1. Write SQL queries to CREATE TABLES for various databases using DDL commands (i.e. CREATE, ALTER, DROP, TRUNCATE).
 2. Write SQL queries to MANIPULATE TABLES for various databases using DML commands (i.e. INSERT, SELECT, UPDATE, DELETE,).
 
