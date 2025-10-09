@@ -17,7 +17,7 @@
 ## 11. [WEEK-11](#WEEK-11)
 ## 12. [WEEK-12](#WEEK-12)
 ## 13. [Additional Experiment-1](#Additional-Experiment-1)
-## 14. [Additional Experiment-2](#Additional-Experiment-2:)
+## 14. [Additional Experiment-2](#Additional-Experiment-2)
 ## 15. [Additional Experiment-3](#Additional-Experiment-3)
 ## 16. [Additional Experiment-4](#Additional-Experiment-4)
 ## 17. [Additional Experiment-5](#Additional-Experiment-5)
@@ -1053,7 +1053,7 @@ VALUES ('Jane Smith', 'jane.smith@example.com', TO_DATE('2002-12-20', 'YYYY-MM-D
 SELECT * FROM students;
 ```
 
-## [Additonal Experiment 2:](#DBMS-LAB) 
+## [Additonal Experiment 2](#DBMS-LAB) 
 ### Implement Materialized Views for Precomputed Data
 **Implementing Materialized Views in Oracle helps precompute and store the results of complex queries (especially those involving joins or aggregations), which improves performance for repeated access.**
 
@@ -1108,7 +1108,7 @@ GROUP BY course;
 3. Heavy joins across large tables
 4. Reporting in BI tools
 
-## [Additonal Experiment 3:](#DBMS-LAB) 
+## [Additonal Experiment 3](#DBMS-LAB) 
 # 📊 Analytical Functions in Oracle 11g – Details and Example
 
 Oracle Analytical Functions are powerful tools for performing ranking, windowing, and comparison operations across sets of rows that are related to the current row. They are especially useful for analytics and reporting.
@@ -1208,7 +1208,7 @@ FROM students;
 - Generating sequential IDs
 - Comparing trends between students
 
-## [Additonal Experiment 4:](#DBMS-LAB) 
+## [Additonal Experiment 4](#DBMS-LAB) 
 # 📦 Storing and Searching JSON Data in Oracle 11g
 
 In Oracle 11g, JSON data can be stored in a CLOB column. Although native JSON support and indexing is officially available from Oracle 12c onward, we can still store JSON and use **functional indexes** for fast searching.
@@ -1299,7 +1299,86 @@ WHERE REGEXP_SUBSTR(student_info, '"course":"([^"]+)"', 1, 1, NULL, 1) = 'CSE';
    - `JSON_VALUE`, `JSON_TABLE`
    - Native JSON indexing
 
-## [Additonal Experiment 5:](#DBMS-LAB) 
+## [Additonal Experiment 5](#DBMS-LAB) 
+# 🧮 Virtual Columns in Oracle 11g
+
+Virtual columns are **columns that are calculated automatically** based on other columns in the same table. They do not store data physically (unless indexed) and are computed on the fly.
+
+---
+
+## 1️⃣ Create Table with Virtual Columns
+
+```sql
+CREATE TABLE students_scores (
+    student_id NUMBER PRIMARY KEY,
+    name VARCHAR2(50),
+    marks1 NUMBER,
+    marks2 NUMBER,
+    marks3 NUMBER,
+    total_marks NUMBER GENERATED ALWAYS AS (marks1 + marks2 + marks3) VIRTUAL,
+    average_marks NUMBER GENERATED ALWAYS AS ((marks1 + marks2 + marks3)/3) VIRTUAL
+);
+```
+
+**Explanation:**
+
+- `total_marks` is a **virtual column** that sums `marks1 + marks2 + marks3`.
+- `average_marks` is a **virtual column** that calculates the average.
+- No need to insert values into virtual columns; they are **computed automatically**.
+
+---
+
+## 2️⃣ Insert Sample Data
+
+```sql
+INSERT INTO students_scores (student_id, name, marks1, marks2, marks3)
+VALUES (1, 'Alice', 85, 90, 95);
+
+INSERT INTO students_scores (student_id, name, marks1, marks2, marks3)
+VALUES (2, 'Bob', 80, 85, 88);
+
+INSERT INTO students_scores (student_id, name, marks1, marks2, marks3)
+VALUES (3, 'Charlie', 78, 82, 80);
+
+COMMIT;
+```
+
+---
+
+## 3️⃣ Query Table
+
+```sql
+SELECT student_id, name, marks1, marks2, marks3, total_marks, average_marks
+FROM students_scores;
+```
+
+**Sample Output:**
+
+| student_id | name    | marks1 | marks2 | marks3 | total_marks | average_marks |
+|------------|---------|--------|--------|--------|-------------|---------------|
+| 1          | Alice   | 85     | 90     | 95     | 270         | 90            |
+| 2          | Bob     | 80     | 85     | 88     | 253         | 84.33         |
+| 3          | Charlie | 78     | 82     | 80     | 240         | 80            |
+
+---
+
+## 4️⃣ Optional: Index a Virtual Column
+
+```sql
+CREATE INDEX idx_total_marks
+ON students_scores(total_marks);
+```
+
+---
+
+## ✅ Notes
+
+1. Virtual columns are **computed on the fly**, no storage required unless indexed.
+2. Expressions, functions, or calculations can be used in virtual columns.
+3. Ideal for derived data like **totals, averages, discounts, or calculated fields**.
+4. Virtual columns can be used in queries and **WHERE clauses** just like normal columns.
+
+
 
 
 
