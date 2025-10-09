@@ -1209,6 +1209,96 @@ FROM students;
 - Comparing trends between students
 
 ## [Additonal Experiment 4:](#DBMS-LAB) 
+# 📦 Storing and Searching JSON Data in Oracle 11g
+
+In Oracle 11g, JSON data can be stored in a CLOB column. Although native JSON support and indexing is officially available from Oracle 12c onward, we can still store JSON and use **functional indexes** for fast searching.
+
+---
+
+## 1️⃣ Create Table to Store JSON
+
+```sql
+CREATE TABLE student_json_data (
+    student_id NUMBER PRIMARY KEY,
+    student_info CLOB
+);
+```
+
+- `student_info` will hold the JSON data as text (CLOB).
+
+---
+
+## 2️⃣ Insert Sample JSON Data
+
+```sql
+INSERT INTO student_json_data (student_id, student_info)
+VALUES (1, '{"name":"Alice", "course":"CSE", "total_marks":480}');
+
+INSERT INTO student_json_data (student_id, student_info)
+VALUES (2, '{"name":"Bob", "course":"CSE", "total_marks":450}');
+
+INSERT INTO student_json_data (student_id, student_info)
+VALUES (3, '{"name":"Charlie", "course":"ECE", "total_marks":470}');
+
+COMMIT;
+```
+
+---
+
+## 3️⃣ Query JSON Data (Oracle 11g)
+
+Since Oracle 11g does not have `JSON_VALUE`, you can extract values using `REGEXP_SUBSTR`:
+
+```sql
+SELECT student_id,
+       REGEXP_SUBSTR(student_info, '"name":"([^"]+)"', 1, 1, NULL, 1) AS name,
+       REGEXP_SUBSTR(student_info, '"course":"([^"]+)"', 1, 1, NULL, 1) AS course,
+       REGEXP_SUBSTR(student_info, '"total_marks":([0-9]+)', 1, 1, NULL, 1) AS total_marks
+FROM student_json_data
+WHERE REGEXP_SUBSTR(student_info, '"course":"([^"]+)"', 1, 1, NULL, 1) = 'CSE';
+```
+
+---
+
+## 4️⃣ Create Functional Index for Fast Searching
+
+To improve search performance on JSON fields:
+
+```sql
+-- Index on course field inside JSON
+CREATE INDEX idx_student_course
+ON student_json_data (
+    REGEXP_SUBSTR(student_info, '"course":"([^"]+)"', 1, 1, NULL, 1)
+);
+```
+
+- This **functional index** allows faster searches on `"course"` inside the JSON.
+
+---
+
+## 5️⃣ Query Using Index
+
+```sql
+SELECT student_id,
+       REGEXP_SUBSTR(student_info, '"name":"([^"]+)"', 1, 1, NULL, 1) AS name,
+       REGEXP_SUBSTR(student_info, '"course":"([^"]+)"', 1, 1, NULL, 1) AS course
+FROM student_json_data
+WHERE REGEXP_SUBSTR(student_info, '"course":"([^"]+)"', 1, 1, NULL, 1) = 'CSE';
+```
+
+- The functional index `idx_student_course` helps the database find `"CSE"` entries faster.
+
+---
+
+## ✅ Notes
+
+1. Oracle 11g **does not have native JSON types**, so JSON is stored as **CLOB**.
+2. `REGEXP_SUBSTR` or `EXTRACTVALUE` is used to extract JSON fields.
+3. Functional indexes significantly improve **query performance**.
+4. In Oracle 12c or higher, you can use:
+   - `JSON_VALUE`, `JSON_TABLE`
+   - Native JSON indexing
+
 ## [Additonal Experiment 5:](#DBMS-LAB) 
 
 
