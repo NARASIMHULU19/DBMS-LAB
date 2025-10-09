@@ -1109,6 +1109,105 @@ GROUP BY course;
 4. Reporting in BI tools
 
 ## [Additonal Experiment 3:](#DBMS-LAB) 
+# 📊 Analytical Functions in Oracle 11g – Details and Example
+
+Oracle Analytical Functions are powerful tools for performing ranking, windowing, and comparison operations across sets of rows that are related to the current row. They are especially useful for analytics and reporting.
+
+---
+
+## 1. 🧠 Detailed Descriptions of Analytical Functions
+
+### a. `RANK()`
+- **Description**: Assigns a rank to each row within a partition of a result set.
+- **Note**: If two rows have the same rank, the next rank(s) will be skipped.
+- **Use Case**: Competitive ranking.
+
+---
+
+### b. `DENSE_RANK()`
+- **Description**: Similar to `RANK()`, but does **not skip ranks** when there are ties.
+- **Use Case**: Consecutive ranking without gaps.
+
+---
+
+### c. `ROW_NUMBER()`
+- **Description**: Assigns a unique number to each row based on the specified order.
+- **Note**: No ties — each row gets a unique number.
+- **Use Case**: Pagination, unique row identification.
+
+---
+
+### d. `NTILE(n)`
+- **Description**: Divides the rows into `n` approximately equal groups (buckets).
+- **Use Case**: Performance segmentation (e.g., top 25%, bottom 25%).
+
+---
+
+### e. `LAG()`
+- **Description**: Returns the value of a row that comes **before** the current row.
+- **Use Case**: Compare current row with the previous row.
+
+---
+
+### f. `LEAD()`
+- **Description**: Returns the value of a row that comes **after** the current row.
+- **Use Case**: Compare current row with the next row.
+
+---
+
+## 2. 🛠️ Example to Demonstrate All Analytical Functions
+
+### 📥 Step 1: Table Creation and Sample Data
+
+```sql
+CREATE TABLE students (
+    student_id NUMBER PRIMARY KEY,
+    name VARCHAR2(100),
+    total_marks NUMBER,
+    course VARCHAR2(100)
+);
+
+INSERT INTO students VALUES (1, 'Alice', 480, 'CSE');
+INSERT INTO students VALUES (2, 'Bob', 450, 'CSE');
+INSERT INTO students VALUES (3, 'Charlie', 450, 'CSE');
+INSERT INTO students VALUES (4, 'David', 500, 'ECE');
+INSERT INTO students VALUES (5, 'Eva', 480, 'ECE');
+INSERT INTO students VALUES (6, 'Frank', 470, 'ECE');
+COMMIT;
+```
+
+---
+
+### 📊 Step 2: Query Using All Analytical Functions
+
+```sql
+SELECT student_id, name, course, total_marks,
+       RANK() OVER (PARTITION BY course ORDER BY total_marks DESC) AS rank,
+       DENSE_RANK() OVER (PARTITION BY course ORDER BY total_marks DESC) AS dense_rank,
+       ROW_NUMBER() OVER (PARTITION BY course ORDER BY total_marks DESC) AS row_num,
+       NTILE(3) OVER (PARTITION BY course ORDER BY total_marks DESC) AS ntile_group,
+       LAG(total_marks) OVER (PARTITION BY course ORDER BY total_marks DESC) AS previous_marks,
+       LEAD(total_marks) OVER (PARTITION BY course ORDER BY total_marks DESC) AS next_marks
+FROM students;
+```
+
+---
+
+## ✅ Notes
+
+- All functions are fully supported in **Oracle 11g**, including Oracle 11g XE.
+- `PARTITION BY` separates rankings by course.
+- `ORDER BY` defines how to rank or compare.
+
+---
+
+## 📌 Use Cases
+
+- Finalizing student ranks
+- Finding top/bottom performers
+- Generating sequential IDs
+- Comparing trends between students
+
 ## [Additonal Experiment 4:](#DBMS-LAB) 
 ## [Additonal Experiment 5:](#DBMS-LAB) 
 
